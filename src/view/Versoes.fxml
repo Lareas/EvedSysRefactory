@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="684.0" prefWidth="869.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.VersoesController">
+   <children>
+      <Label layoutX="77.0" layoutY="28.0" text="Notificações de Versões">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <FontAwesomeIconView glyphName="GEARS" layoutX="23.0" layoutY="52.0" size="30" />
+      <TableView fx:id="tvPesquisa" layoutX="23.0" layoutY="81.0" prefHeight="328.0" prefWidth="819.0">
+        <columns>
+          <TableColumn fx:id="tcVersao" prefWidth="75.0" text="Versão" />
+          <TableColumn fx:id="tcData" prefWidth="75.0" text="Data" />
+            <TableColumn fx:id="tcDesc" prefWidth="660.0" text="Descrição" />
+        </columns>
+      </TableView>
+      <Label layoutX="23.0" layoutY="435.0" text="Versão" />
+      <TextField fx:id="edVersao" editable="false" layoutX="23.0" layoutY="452.0" />
+      <Label layoutX="216.0" layoutY="435.0" text="Data" />
+      <TextField fx:id="edData" editable="false" layoutX="216.0" layoutY="452.0" prefHeight="25.0" prefWidth="83.0" />
+      <Label layoutX="23.0" layoutY="493.0" text="Descrição" />
+      <TextArea fx:id="taDesc" editable="false" layoutX="23.0" layoutY="510.0" prefHeight="148.0" prefWidth="819.0" />
+   </children>
+</AnchorPane>

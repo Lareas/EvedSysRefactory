@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Point3D?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="205.0" prefWidth="619.0" style="-fx-background-color: #d79718;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CrudMatriDisController">
+   <children>
+      <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="322.0" prefWidth="561.0" style="-fx-background-color: #FFF;" styleClass="text-field2" AnchorPane.bottomAnchor="7.0" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="7.0" AnchorPane.topAnchor="7.0">
+         <effect>
+            <DropShadow blurType="GAUSSIAN" color="#520b0b8f" height="6.0" radius="2.5" width="6.0" />
+         </effect>
+         <children>
+            <ComboBox fx:id="cbDisciplina" layoutX="112.0" layoutY="19.0" prefHeight="25.0" prefWidth="430.0" />
+            <ButtonBar buttonMinWidth="20.0" buttonOrder="" layoutX="355.0" layoutY="121.0" prefHeight="59.0" prefWidth="236.0" AnchorPane.rightAnchor="14.0">
+               <padding>
+                  <Insets left="5.0" right="5.0" />
+               </padding>
+               <buttons>
+                  <JFXButton fx:id="buConfirma" accessibleText="buConfirma" buttonType="RAISED" onAction="#clicouConfirma" prefHeight="34.0" prefWidth="120.0" style="-fx-background-color: #008F82;" styleClass="button-nav" text="Confirma" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="CHECK_SQUARE_ALT" size="16.0" styleClass="glyph-icon-nav" wrappingWidth="20.714285850524902" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="buCancela" accessibleText="buCancela" buttonType="RAISED" onAction="#clicouCancela" prefHeight="34.0" prefWidth="120.0" style="-fx-background-color: #EE4D39;" styleClass="button-nav" text="Cancela" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="CLOSE" size="16.0" styleClass="glyph-icon-nav" wrappingWidth="17.571428298950195" />
+                     </graphic>
+                  </JFXButton>
+               </buttons>
+            </ButtonBar>
+            <Label fx:id="lblIns" alignment="CENTER" layoutX="22.0" layoutY="137.0" prefHeight="30.0" prefWidth="199.0" style="-fx-background-color: #0081FF;" text="INSERINDD NOVA DISCIPLINA" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblEdi" alignment="CENTER" layoutX="22.0" layoutY="137.0" prefHeight="30.0" prefWidth="199.0" style="-fx-background-color: #F39C12;" text="EDITANDO ESTA DISCIPLINA" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="buRefDen" accessibleText="buInsereRec" buttonType="RAISED" contentDisplay="CENTER" layoutX="559.0" layoutY="20.0" maxHeight="23.0" maxWidth="23.0" minHeight="23.0" minWidth="23.0" onAction="#clicouRefreshDen" prefHeight="23.0" prefWidth="23.0" style="-fx-background-color: #2BB502;" styleClass="button-refresh" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView boundsType="LOGICAL_VERTICAL_CENTER" fill="WHITE" glyphName="REFRESH" size="14" styleClass="glyph-icon-nav" wrappingWidth="11.0">
+                     <rotationAxis>
+                        <Point3D />
+                     </rotationAxis>
+                  </FontAwesomeIconView>
+               </graphic>
+            </JFXButton>
+            <RadioButton fx:id="rbReg" layoutX="112.0" layoutY="71.0" mnemonicParsing="false" onAction="#mudouTIpo" text="Regular" textFill="#1565c6">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="tg1" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="rbOuv" layoutX="237.0" layoutY="71.0" mnemonicParsing="false" onAction="#mudouTIpo" text="Ouvinte" textFill="#ba7518" toggleGroup="$tg1">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="rbEsp" layoutX="355.0" layoutY="71.0" mnemonicParsing="false" onAction="#mudouTIpo" text="Especial" textFill="#d00e0e" toggleGroup="$tg1">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </RadioButton>
+            <Label fx:id="lblTipo" layoutX="23.0" layoutY="94.0" text="Selecione o Tipo de Aluno">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="22.0" layoutY="71.0" text="Tipo de Aluno">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <RadioButton fx:id="rbGra" layoutX="468.0" layoutY="71.0" mnemonicParsing="false" onAction="#mudouTIpo" text="Gravação" textFill="#1da11d">
+               <toggleGroup>
+                  <ToggleGroup fx:id="tg11" />
+               </toggleGroup>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </RadioButton>
+         </children>
+      </AnchorPane>
+      <Line fx:id="lineRed" endX="42.0" endY="-72.0" layoutX="82.0" layoutY="65.0" startX="-100.0" stroke="RED" strokeWidth="20.0" />
+      <Label layoutX="58.0" layoutY="33.0" text="Disciplina" />
+      <MaterialDesignIconView fill="#662e23" glyphName="LIBRARY_BOOKS" layoutX="24.0" layoutY="52.0" size="30" />
+   </children>
+</AnchorPane>

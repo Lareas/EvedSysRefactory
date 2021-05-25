@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="687.0" prefWidth="1298.0" stylesheets="@../..resources/MeuCSS/meuCSS000.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DadocadastrogeralSimplesController">
+   <children>
+      <AnchorPane layoutY="1.0" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="tab-Pesquisa">
+         <children>
+            <Pane layoutY="-3.0" maxHeight="40.0" minHeight="40.0" prefHeight="40.0" prefWidth="707.0" style="-fx-background-color: #9ACCF1;" styleClass="card-title" AnchorPane.bottomAnchor="4.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-3.0">
+               <children>
+                  <AnchorPane layoutX="14.0" layoutY="12.0" prefHeight="138.0" prefWidth="1270.0" style="-fx-background-color: #E3EBEE;" styleClass="text-field2">
+                     <children>
+                        <JFXButton accessibleText="buInsereRec" buttonType="RAISED" layoutX="987.0" layoutY="6.0" onAction="#clicouFiltra" prefHeight="34.0" prefWidth="130.0" style="-fx-background-color: #8956A5;" styleClass="button-nav" text="Filtra" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="FILTER" size="20" styleClass="glyph-icon-nav" wrappingWidth="21.571428298950195" />
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton accessibleText="buPesquisa" buttonType="RAISED" layoutX="987.0" layoutY="47.0" onAction="#clicouLimpa" prefHeight="34.0" prefWidth="130.0" style="-fx-background-color: #f39c12;" styleClass="button-nav" text="Limpa" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIconView glyphName="CIRCLE_THIN" styleClass="glyph-icon-nav" wrappingWidth="17.214285850524902" />
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton accessibleText="buPesquisa" buttonType="RAISED" layoutX="1126.0" layoutY="47.0" onAction="#clicouAbre" prefHeight="34.0" prefWidth="130.0" style="-fx-background-color: #008F82;" styleClass="button-nav" text="Abre" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIconView glyphName="FOLDER_OPEN_ALT" styleClass="glyph-icon-nav" wrappingWidth="17.214285850524902" />
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton accessibleText="buInsereRec" buttonType="RAISED" layoutX="1126.0" layoutY="6.0" onAction="#clicouFiltraAt" prefHeight="34.0" prefWidth="130.0" style="-fx-background-color: #6762AE;" styleClass="button-nav" text="Ativos Atuais" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="ANGLE_DOUBLE_LEFT" size="20" styleClass="glyph-icon-nav" wrappingWidth="21.571428298950195" />
+                           </graphic>
+                        </JFXButton>
+                        <Label alignment="CENTER" layoutX="8.0" layoutY="4.0" text="Cadastro de Alunos" textAlignment="CENTER" textFill="#0b5786">
+                           <font>
+                              <Font name="Calibri Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="82.0" layoutY="30.0" text="Aluno" />
+                        <Label layoutX="345.0" layoutY="30.0" text="Titulação" />
+                        <Label layoutX="336.0" layoutY="66.0" text="Programa" />
+                        <TextField fx:id="edAluno" layoutX="126.0" layoutY="25.0" onAction="#onActionClicar" prefHeight="30.0" prefWidth="204.0" />
+                        <TextField fx:id="edMatri" layoutX="126.0" layoutY="61.0" onAction="#onActionClicar" onKeyPressed="#clicouMatri" prefHeight="30.0" prefWidth="54.0" />
+                        <TextField fx:id="edCodAlu" layoutX="276.0" layoutY="61.0" onAction="#onActionClicar" onKeyPressed="#clicouCod" prefHeight="30.0" prefWidth="54.0" />
+                        <ComboBox fx:id="cbProgramas" layoutX="409.0" layoutY="25.0" onAction="#onActionClicar" onKeyPressed="#clicouEnter" prefHeight="30.0" prefWidth="240.0" />
+                        <ComboBox fx:id="cbCursos" layoutX="409.0" layoutY="61.0" onAction="#onActionClicar" prefHeight="30.0" prefWidth="240.0" />
+                        <ComboBox fx:id="cbSituacoes" layoutX="409.0" layoutY="97.0" onAction="#onActionClicar" prefHeight="30.0" prefWidth="240.0" />
+                        <Label layoutX="349.0" layoutY="102.0" text="Situação" />
+                        <JFXButton accessibleText="buInsereRec" buttonType="RAISED" layoutX="848.0" layoutY="6.0" onAction="#clicouInsere" prefHeight="34.0" prefWidth="130.0" style="-fx-background-color: #0081FF;" styleClass="button-nav" text="Insere" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="FILE_ALT" size="16.0" styleClass="glyph-icon-nav" wrappingWidth="21.571428298950195" />
+                           </graphic>
+                        </JFXButton>
+                        <Label layoutX="62.0" layoutY="65.0" text="Matrícula" />
+                        <Label layoutX="200.0" layoutY="66.0" text="Cód. Aluno" />
+                        <FontAwesomeIconView fill="#1874d8" glyphName="SEARCH" layoutX="14.0" layoutY="58.0" size="30" styleClass="glyph-icon2" wrappingWidth="39.99999165534973" />
+                        <JFXButton accessibleText="buPesquisa" buttonType="RAISED" graphicTextGap="2.0" layoutX="848.0" layoutY="88.0" onAction="#clicouExpPDF" prefHeight="34.0" prefWidth="130.0" style="-fx-background-color: #012E17;" styleClass="button-nav" text="Exportar PDF" textFill="WHITE" visible="false">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="FILE_PDF_ALT" size="16.0" styleClass="glyph-icon-nav" wrappingWidth="21.571428298950195" />
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton accessibleText="buPesquisa" buttonType="RAISED" graphicTextGap="2.0" layoutX="848.0" layoutY="47.0" onAction="#clicouExpPDF" prefHeight="34.0" prefWidth="130.0" style="-fx-background-color: #207245;" styleClass="button-nav" text="Exportar Excel" textFill="WHITE" visible="false">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="FILE_EXCEL_ALT" size="16.0" styleClass="glyph-icon-nav" wrappingWidth="21.571428298950195" />
+                           </graphic>
+                        </JFXButton>
+                        <ComboBox fx:id="cbGrade" layoutX="677.0" layoutY="61.0" onAction="#mudouGrade" prefHeight="25.0" prefWidth="103.0" styleClass="meucombo" />
+                        <Label layoutX="677.0" layoutY="41.0" text="Grade (Ano.Semestre)" />
+                     </children>
+                     <effect>
+                        <DropShadow blurType="GAUSSIAN" color="#520b0b8f" height="6.0" radius="2.5" width="6.0" />
+                     </effect>
+                  </AnchorPane>
+                  <Label fx:id="lblFiltrados" alignment="CENTER" layoutX="1161.0" layoutY="8.0" prefHeight="20.0" prefWidth="124.0" styleClass="text-field3" text="100" visible="false" />
+               </children>
+            </Pane>
+            <TableView fx:id="tvPesquisa" layoutX="78.0" layoutY="152.0" onMouseClicked="#clicouTvPesquisa" prefHeight="504.0" prefWidth="1294.0" AnchorPane.bottomAnchor="31.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="152.0">
+               <contextMenu>
+                  <ContextMenu>
+                     <items>
+                        <MenuItem mnemonicParsing="false" onAction="#clicouAbre" text="Abre este registro" />
+                     </items>
+                  </ContextMenu>
+               </contextMenu>
+               <columns>
+                  <TableColumn fx:id="tcMatri" prefWidth="50.0" text="Matr." />
+                  <TableColumn fx:id="tcCodigo" prefWidth="50.0" text="Código" />
+                  <TableColumn fx:id="tcAluno" prefWidth="200.0" text="Aluno" />
+                  <TableColumn fx:id="tcPrograma" prefWidth="123.99998474121094" text="Titulação" />
+                  <TableColumn fx:id="tcCurso" prefWidth="240.0" text="Programa" />
+                  <TableColumn fx:id="tcNumProg" prefWidth="50.0" text="progs" />
+                  <TableColumn fx:id="tcSituacao" prefWidth="130.0" text="Situação" />
+                  <TableColumn fx:id="tcAnoLetivo" maxWidth="146.0" minWidth="34.0" prefWidth="50.0" text="Ano Let" />
+                  <TableColumn fx:id="tcSemestre" maxWidth="77.0" prefWidth="46.0" text="Sem." />
+                  <TableColumn fx:id="tcDataCadastro" prefWidth="75.0" text="Data Cad" />
+                  <TableColumn fx:id="tcLocalidade" prefWidth="120.0" text="Localidade" />
+                  <TableColumn fx:id="tcCelular" prefWidth="90.0" text="Celular" />
+                  <TableColumn fx:id="tcEmailPessoal" prefWidth="150.0" text="E-mail pessoal" />
+               </columns>
+            </TableView>
+            <AnchorPane maxHeight="30.0" minHeight="20.0" prefHeight="30.0" prefWidth="707.0" style="-fx-background-color: #D0D9D9;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <TextField fx:id="lblRegistros" layoutX="35.0" prefHeight="30.0" prefWidth="714.0" style="-fx-background-color: #D3D3FF;" text="Registros" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

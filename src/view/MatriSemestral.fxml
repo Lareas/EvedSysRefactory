@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="677.0" prefWidth="1104.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MatriSemestralController">
+   <children>
+      <Pane fx:id="top_pane" prefHeight="67.0" prefWidth="158.0" style="-fx-background-color: #662e23;" AnchorPane.leftAnchor="0.0">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutY="3.0" prefHeight="59.0" prefWidth="158.0" text="Matrículas&#10;Semestrais" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <VBox layoutY="68.0" prefHeight="323.0" prefWidth="158.0" spacing="7.0" style="-fx-background-color: #352116;" stylesheets="@../MeuCSS/meuCSSmenuP.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="67.0">
+         <children>
+            <JFXButton fx:id="buRecIni1" accessibleText="RecIni" layoutX="20.0" layoutY="20.0" onAction="#clicouIniciarMatri" prefHeight="42.0" prefWidth="139.0" style="-fx-background-color: #66402b;" styleClass="nav-button" text="Iniciar Mat." textAlignment="CENTER" textFill="#a1aec4" visible="false">
+               <font>
+                  <Font name="Roboto Bold" size="14.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="#a1aec4" glyphName="FILE" size="20" wrappingWidth="29.0" />
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="buFechaMS" accessibleText="buInsereRec" buttonType="RAISED" contentDisplay="CENTER" maxWidth="144.0" minHeight="34.0" minWidth="144.0" onAction="#clicouFechaMS" prefHeight="51.0" prefWidth="132.0" style="-fx-background-color: #894030;" styleClass="button-nav" text="Fecha &#10;Matrícula Semestral" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </JFXButton>
+            <JFXButton accessibleText="RecIni" layoutX="20.0" layoutY="20.0" onAction="#clicouAlteraMatri" prefHeight="42.0" prefWidth="139.0" style="-fx-background-color: #66402b;" styleClass="nav-button" text="Editar Mat." textAlignment="CENTER" textFill="#a1aec4" visible="false">
+               <font>
+                  <Font name="Roboto Bold" size="14.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="#a1aec4" glyphName="PENCIL_SQUARE" size="20" wrappingWidth="29.0" />
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="buRecIni" accessibleText="RecIni" layoutX="10.0" layoutY="70.0" onAction="#clicouSemestre" prefHeight="42.0" prefWidth="139.0" style="-fx-background-color: #66402b;" styleClass="nav-button" text="Semestre" textAlignment="CENTER" textFill="#a1aec4" visible="false">
+               <font>
+                  <Font name="Roboto Bold" size="14.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="#a1aec4" glyphName="CALENDAR" size="20" wrappingWidth="29.0" />
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="buReciRec" accessibleText="RecRec" layoutX="10.0" layoutY="10.0" onAction="#clicouDisciplinas" prefHeight="42.0" prefWidth="139.0" style="-fx-background-color: #66402b;" styleClass="nav-button" text="Disciplinas" textFill="#a1aec4" visible="false">
+               <font>
+                  <Font name="Roboto Bold" size="14.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="#a1aec4" glyphName="LIST_OL" size="19" wrappingWidth="29.0" />
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="buReciPes" accessibleText="RecPes" layoutX="10.0" layoutY="10.0" onAction="#ClicouPagamento" prefHeight="42.0" prefWidth="139.0" style="-fx-background-color: #66402b;" styleClass="nav-button" text="Pagamento" textFill="#a1aec4" visible="false">
+               <font>
+                  <Font name="Roboto Bold" size="14.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="#a1aec4" glyphName="MONEY" size="19" wrappingWidth="29.0" />
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="buRecImp" accessibleText="recImp" layoutX="10.0" layoutY="52.0" onAction="#clicouImprimir" prefHeight="42.0" prefWidth="139.0" style="-fx-background-color: #66402b;" styleClass="nav-button" text="Imprimir" textFill="#a1aec4" visible="false">
+               <font>
+                  <Font name="Roboto Bold" size="14.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="#a1aec4" glyphName="PRINT" size="19" wrappingWidth="29.0" />
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="buUsers" accessibleText="RecRel" layoutX="10.0" layoutY="136.0" onAction="#clicouRelatorios" prefHeight="42.0" prefWidth="139.0" style="-fx-background-color: #66402b;" styleClass="nav-button" text="Relatórios" textFill="#a1aec4" visible="false">
+               <font>
+                  <Font name="Roboto Bold" size="14.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="#a1aec4" glyphName="LIST_ALT" size="19" wrappingWidth="29.0" />
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="buRecUser" accessibleText="RecUsu" layoutX="10.0" layoutY="178.0" prefHeight="42.0" prefWidth="139.0" style="-fx-background-color: #66402b;" styleClass="nav-button" text="Usuários" textFill="#a1aec4" visible="false">
+               <font>
+                  <Font name="Roboto Bold" size="14.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="#a1aec4" glyphName="USER_TIMES" size="19" wrappingWidth="29.0" />
+               </graphic>
+            </JFXButton>
+         </children>
+         <padding>
+            <Insets left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </VBox>
+      <ScrollPane fx:id="spMatriSem" layoutX="129.0" layoutY="200.0" prefHeight="1002.0" prefWidth="943.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="159.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <content>
+            <AnchorPane fx:id="apCabec" minHeight="0.0" minWidth="0.0" prefHeight="661.0" prefWidth="910.0" style="-fx-background-color: #fefaeb;">
+               <children>
+                  <Pane layoutX="616.0" layoutY="13.0" prefHeight="102.0" prefWidth="286.0" style="-fx-background-color: #fbecae; -fx-background-radius: 5;">
+                     <children>
+                        <Label layoutX="52.0" layoutY="14.0" text="Semestre" textFill="#662e23">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <FontAwesomeIconView fill="#662e23" glyphName="CALENDAR" layoutX="10.0" layoutY="38.0" size="30" />
+                        <Label fx:id="lblSemestre" layoutX="54.0" layoutY="51.0" text="2020, 2º semestre" textFill="#662e23">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <FontAwesomeIconView fx:id="fvBoneco" fill="#662e23" glyphName="USER" layoutX="38.0" layoutY="98.0" size="90" styleClass="glyph-icon-nav" text="" wrappingWidth="87.99999713897705" />
+                  <Pane layoutX="146.0" layoutY="13.0" prefHeight="102.0" prefWidth="456.0" style="-fx-background-color: #fbecae; -fx-background-radius: 5;">
+                     <children>
+                        <Label layoutX="46.0" layoutY="9.0" text="Programa" textFill="#662e23">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <MaterialDesignIconView fill="#662e23" glyphName="MARKER_CHECK" layoutX="8.0" layoutY="36.0" size="30" />
+                        <Label layoutX="244.0" layoutY="21.0" text="Data Matrícula">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <JFXDatePicker fx:id="dpDataMatri" defaultColor="#662e23" layoutX="335.0" layoutY="11.0" onKeyReleased="#clicouTFFdnasc" prefHeight="25.0" prefWidth="101.0" style="-fx-background-color: #FFF;" />
+                        <Label fx:id="lblAlu" layoutX="14.0" layoutY="58.0" text="Aluno: Luiz Fernando de Assis Moura Arêas" textFill="#662e23">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblPro" layoutX="14.0" layoutY="79.0" text="Programa: Curso de Estudos Bíblicos (Diurno) - Bchinês" textFill="#662e23">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="28.0" layoutY="127.0" prefHeight="485.0" prefWidth="874.0" style="-fx-background-color: #fbecae; -fx-background-radius: 5;">
+                     <children>
+                        <Label layoutX="52.0" layoutY="11.0" text="Disciplinas" textFill="#662e23">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <MaterialDesignIconView fill="#662e23" glyphName="LIBRARY_BOOKS" layoutX="14.0" layoutY="38.0" size="30" />
+                        <TableView fx:id="tvMatriDis" layoutX="14.0" layoutY="52.0" prefHeight="166.0" prefWidth="846.0">
+                           <columns>
+                              <TableColumn fx:id="tcTipoAluno" onEditCommit="#clicouTipoAluno" prefWidth="44.999969482421875" text="Tipo&#10;Aluno" />
+                              <TableColumn fx:id="tcData" prefWidth="124.0" text="Data" />
+                              <TableColumn fx:id="tcHorario" prefWidth="102.0" text="Horário" />
+                              <TableColumn fx:id="tcDisciplina" prefWidth="260.0" text="Disciplina" />
+                              <TableColumn fx:id="tcProfessor" prefWidth="150.0" text="Professor" />
+                              <TableColumn fx:id="tcCred" prefWidth="28.0" text="Cr" />
+                              <TableColumn fx:id="tcTotAlu" prefWidth="45.0" text="Tot&#10;Alunos" />
+                              <TableColumn fx:id="tcTotDispRE" prefWidth="45.0" text="Disp&#10;R/E" />
+                              <TableColumn fx:id="tcTotDisoO" prefWidth="45.0" text="Disp&#10;O" />
+                              <TableColumn fx:id="tcCADI" prefWidth="45.0" text="Disp&#10;O" visible="false" />
+                           </columns>
+                        </TableView>
+                        <ButtonBar buttonMinWidth="20.0" buttonOrder="" layoutX="709.0" layoutY="-4.0" prefHeight="59.0" prefWidth="156.0">
+                           <buttons>
+                              <JFXButton accessibleText="buInsereRec" buttonType="RAISED" layoutX="148.0" layoutY="20.0" maxWidth="38.0" minWidth="30.0" onAction="#clicouInsereMDis" prefHeight="34.0" prefWidth="30.0" style="-fx-background-color: #0081FF;" styleClass="button-nav" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                                 <graphic>
+                                    <FontAwesomeIconView boundsType="VISUAL" fill="WHITE" glyphName="FILE_ALT" size="16.0" styleClass="glyph-icon-nav" wrappingWidth="28.0" x="5.0" y="5.0" />
+                                 </graphic>
+                              </JFXButton>
+                              <JFXButton accessibleText="buEdita" buttonType="RAISED" layoutX="286.0" layoutY="20.0" maxWidth="38.0" minWidth="30.0" onAction="#clicouEditaMDis" prefHeight="34.0" prefWidth="30.0" style="-fx-background-color: #f39c12;" styleClass="button-nav" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                                 <graphic>
+                                    <FontAwesomeIconView boundsType="VISUAL" fill="WHITE" glyphName="PENCIL_SQUARE_ALT" size="16.0" styleClass="glyph-icon-nav" wrappingWidth="21.571428298950195" x="5.0" y="5.0" />
+                                 </graphic>
+                              </JFXButton>
+                              <JFXButton fx:id="buMinApa" accessibleText="buPesquisa" buttonType="RAISED" layoutX="30.0" layoutY="23.0" maxWidth="38.0" minWidth="30.0" onAction="#clicouApagaMDis" prefHeight="34.0" prefWidth="30.0" style="-fx-background-color: #6D1D28;" styleClass="button-nav" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                                 <graphic>
+                                    <FontAwesomeIconView boundsType="VISUAL" fill="WHITE" glyphName="MINUS_CIRCLE" size="16.0" styleClass="glyph-icon-nav" wrappingWidth="21.571428298950195" x="5.0" y="5.0" />
+                                 </graphic>
+                              </JFXButton>
+                           </buttons>
+                           <padding>
+                              <Insets left="5.0" right="5.0" />
+                           </padding>
+                        </ButtonBar>
+                        <TextField fx:id="lblRegDis" editable="false" layoutX="14.0" layoutY="217.0" maxHeight="25.0" minHeight="25.0" prefHeight="25.0" prefWidth="846.0" style="-fx-background-color: #ccffff;">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </TextField>
+                        <Pane layoutX="15.0" layoutY="260.0" prefHeight="122.0" prefWidth="260.0" style="-fx-background-color: #fefefe; -fx-background-radius: 5;">
+                           <children>
+                              <Label layoutX="14.0" layoutY="34.0" text="Créditos (RE)" />
+                              <Label alignment="CENTER" contentDisplay="CENTER" layoutX="90.0" layoutY="13.0" prefHeight="17.0" prefWidth="70.0" text="Nº Créditos" textAlignment="CENTER" />
+                              <Label alignment="CENTER" contentDisplay="CENTER" layoutX="182.0" layoutY="13.0" prefHeight="17.0" prefWidth="82.0" text="Valor (R$)" textAlignment="CENTER" />
+                              <Label fx:id="lblCreRE" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="99.0" layoutY="34.0" prefHeight="17.0" prefWidth="56.0" text="4" textAlignment="RIGHT" textFill="#933a2b">
+                                 <font>
+                                    <Font name="Courier New Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblCreO" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="116.0" layoutY="59.0" prefHeight="17.0" prefWidth="39.0" text="2" textAlignment="RIGHT" textFill="#933a2b">
+                                 <font>
+                                    <Font name="Courier New Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblValCreO" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="173.0" layoutY="59.0" prefHeight="15.0" prefWidth="76.0" text="864,00" textAlignment="RIGHT" textFill="#933a2b">
+                                 <font>
+                                    <Font name="Courier New Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblValCreRE" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="173.0" layoutY="35.0" prefHeight="15.0" prefWidth="76.0" text="2160,00" textAlignment="RIGHT" textFill="#933a2b">
+                                 <font>
+                                    <Font name="Courier New Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="14.0" layoutY="59.0" text="Créditos (O)" />
+                              <Separator layoutX="14.0" layoutY="80.0" prefHeight="3.0" prefWidth="235.0" />
+                              <Label layoutX="14.0" layoutY="94.0" text="Valor dos Créditos" />
+                              <Label fx:id="lblTotCred" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="173.0" layoutY="94.0" prefHeight="15.0" prefWidth="76.0" text="3024,00" textAlignment="RIGHT" textFill="#933a2b">
+                                 <font>
+                                    <Font name="Courier New Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <Label layoutX="318.0" layoutY="247.0" text="Observações" />
+                        <TextArea fx:id="taObsMatricula" layoutX="317.0" layoutY="266.0" prefHeight="69.0" prefWidth="543.0" />
+                        <Pane layoutX="15.0" layoutY="395.0" prefHeight="81.0" prefWidth="260.0" style="-fx-background-color: #fefefe; -fx-background-radius: 5;">
+                           <children>
+                              <Label alignment="CENTER" contentDisplay="CENTER" layoutX="182.0" layoutY="13.0" prefHeight="17.0" prefWidth="82.0" text="Valor (R$)" textAlignment="CENTER" />
+                              <Label fx:id="lblCredRef" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="173.0" layoutY="59.0" prefHeight="15.0" prefWidth="76.0" text="864,00" textAlignment="RIGHT" textFill="#933a2b">
+                                 <font>
+                                    <Font name="Courier New Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblTaxaRef" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="173.0" layoutY="35.0" prefHeight="15.0" prefWidth="76.0" text="2160,00" textAlignment="RIGHT" textFill="#933a2b">
+                                 <font>
+                                    <Font name="Courier New Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="12.0" layoutY="37.0" prefHeight="17.0" prefWidth="118.0" text="Taxa Matrícula (R$)" />
+                              <Label layoutX="13.0" layoutY="59.0" text="Valor Crédito (R$)" />
+                              <Label fx:id="lblDataAlt12" layoutX="6.0" layoutY="8.0" text="Valores de Referência">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <Pane layoutX="6.0" layoutY="247.0" prefHeight="234.0" prefWidth="269.0" style="-fx-background-color: #fbecae;" />
+                        <Label layoutX="60.0" layoutY="372.0" text="Valores Sugeridos" textFill="#662e23">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <MaterialDesignIconView fill="#662e23" glyphName="CASH_USD" layoutX="19.0" layoutY="395.0" size="30" />
+                     </children>
+                  </Pane>
+                  <ImageView fx:id="ivFotoAluno" fitHeight="104.0" fitWidth="91.0" layoutX="28.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true" />
+                  <HBox layoutX="28.0" layoutY="623.0" prefHeight="20.0" prefWidth="874.0" spacing="100.0">
+                     <children>
+                        <CheckBox fx:id="chkVistoVerde" mnemonicParsing="false" onAction="#clicouSec1" prefHeight="20.0" prefWidth="120.0" style="-fx-background-color: green;" text="Secretaria" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox fx:id="chkVistoRoxo" maxHeight="100.0" minWidth="100.0" mnemonicParsing="false" onAction="#clicouSec2" prefHeight="100.0" prefWidth="120.0" style="-fx-background-color: purple;" text="Secretaria" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox fx:id="chkVistoAmarelo" mnemonicParsing="false" onAction="#clicouFin" prefHeight="20.0" prefWidth="104.0" style="-fx-background-color: #ffff00;" text="Financeiro">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox fx:id="chkVistoVermelho" mnemonicParsing="false" onAction="#clicouCoo" prefHeight="20.0" prefWidth="120.0" style="-fx-background-color: red;" text="Coordenação" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </CheckBox>
+                     </children>
+                  </HBox>
+                  <Label fx:id="lblVistoVerde" layoutX="27.0" layoutY="645.0" text="Visto: ">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblVistoRoxo" layoutX="245.0" layoutY="645.0" text="Visto: ">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblVistoAmarelo" layoutX="467.0" layoutY="645.0" text="Visto: ">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblVistoVermelho" layoutX="670.0" layoutY="645.0" text="Visto: ">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Line fx:id="lineRed" endX="42.0" endY="-72.0" layoutX="82.0" layoutY="65.0" startX="-100.0" stroke="RED" strokeWidth="20.0" />
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+    <persistence-unit name="Jpa_EvedSys_Server" transaction-type="RESOURCE_LOCAL">
+        <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+        <class>entities.Cadaludissit</class>
+        <class>entities.Cadastrodisciplina</class>
+        <class>entities.Dadocadastrogeral</class>
+        <class>entities.Cadastroalunodisciplina</class>
+        <class>entities.Curso</class>
+        <class>entities.Defesadissertacaosituacao</class>
+        <class>entities.Funcionario</class>
+        <class>entities.Estadocivil</class>
+        <class>entities.Dadocadastrogeralministeriais</class>
+        <class>entities.Tipotrabalho</class>
+        <class>entities.Dadocadastroprogramasituacao</class>
+        <class>entities.Turma</class>
+        <class>entities.Disciplina</class>
+        <class>entities.Turno</class>
+        <class>entities.Categoriaaluno</class>
+        <class>entities.Dadocadastroprograma</class>
+        <class>entities.Localidade</class>
+        <class>entities.Programa</class>
+        <class>entities.Frequencia</class>
+        <class>entities.Denominacao</class>
+        <class>entities.Ministeriais</class>
+        <class>entities.Nacionalidade</class>
+        <class>entities.Sexo</class>
+        <class>entities.Especificidade</class>
+        <class>entities.Siglaestado</class>
+        <class>entities.Tarefa</class>
+        <class>entities.Aluno</class>
+        <class>entities.Times</class>
+        <class>entities.Tabuser</class>
+        <class>entities.Docsoficiais</class>
+        <class>entities.Profissoes</class>
+        <class>entities.Formacao</class>
+        <class>entities.CepCidades</class>
+        <class>entities.CepLogradouros</class>
+        <class>entities.CepTipoLog</class>
+        <class>entities.CepBairros</class>
+        <class>entities.Perfilusers</class>
+        <class>entities.Modalidade</class>
+        <class>entities.Arqsys</class>
+        <class>entities.Tracking</class>
+        <class>entities.Cordapele</class>
+        <class>entities.Docinsc</class>
+        <class>entities.Docsalunos</class>
+        <class>entities.EsFotosalunos</class>
+        <class>entities.EsGrade</class>
+        <class>entities.EsGrade3</class>
+        <class>entities.EsTipodis</class>
+        <class>entities.EsCalendas</class>
+        <class>entities.EsFeriados</class>
+        <class>entities.EsSalas</class>
+        <class>entities.EsGradedisprg</class>
+        <class>entities.EsMatrisem</class>
+        <class>entities.EsPagamentosdetalhes</class>
+        <class>entities.EsRegaltnotas</class>
+        <class>entities.Esareceber</class>
+        <class>entities.Esformapagtomatrisem</class>
+        <class>entities.EsCategdis</class>
+        <class>entities.ListaCabec</class>
+        <class>entities.ListaAula</class>
+        <class>entities.ListaChamada</class>
+        <class>entities.EsEquivalencia</class>
+        <class>entities.EsEquivalenciadet</class>
+        <class>entities.Notifverfsao</class>
+        <class>entities.Listagens</class>
+        <class>entities.Tabbancos</class>
+        <class>entities.Impalunos</class>
+        
+        <properties>
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://xxxxx/eved_05_05_2020?zeroDateTimeBehavior=convertToNull&amp;useSSL=false"/>
+            <property name="javax.persistence.jdbc.user" value="xxx"/>
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+            <property name="javax.persistence.jdbc.password" value="xxx"/>
+            <!--
+            <property name="eclipselink.logging.level" value="FINE"/>
+            -->
+        </properties>
+    </persistence-unit>
+    <persistence-unit name="persistence-sserver">
+        <jta-data-source>jdbc/persistence-unit-2</jta-data-source>
+        <class>entities.Fisica</class>
+        <properties>
+            <property name="javax.persistence.jdbc.url" value="jdbc:sqlserver://xxx"/>
+            <property name="javax.persistence.jdbc.user" value="xxx"/>
+            <property name="javax.persistence.jdbc.driver" value="com.microsoft.sqlserver.jdbc.SQLServerDriver"/>
+            <property name="javax.persistence.jdbc.password" value="xxx"/>
+        </properties>
+        <!--
+        <property name="eclipselink.logging.level" value="FINE"/>
+        -->
+    </persistence-unit>
+    <persistence-unit name="Jpa_EvedSys_Loc_Copia04_CA" transaction-type="RESOURCE_LOCAL">
+        <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+        <class>entities.Cadaludissit</class>
+        <class>entities.Cadastrodisciplina</class>
+        <class>entities.Dadocadastrogeral</class>
+        <class>entities.Cadastroalunodisciplina</class>
+        <class>entities.Curso</class>
+        <class>entities.Defesadissertacaosituacao</class>
+        <class>entities.Funcionario</class>
+        <class>entities.Estadocivil</class>
+        <class>entities.Dadocadastrogeralministeriais</class>
+        <class>entities.Tipotrabalho</class>
+        <class>entities.Dadocadastroprogramasituacao</class>
+        <class>entities.Turma</class>
+        <class>entities.Disciplina</class>
+        <class>entities.Turno</class>
+        <class>entities.Categoriaaluno</class>
+        <class>entities.Dadocadastroprograma</class>
+        <class>entities.Localidade</class>
+        <class>entities.Programa</class>
+        <class>entities.Frequencia</class>
+        <class>entities.Denominacao</class>
+        <class>entities.Ministeriais</class>
+        <class>entities.Nacionalidade</class>
+        <class>entities.Sexo</class>
+        <class>entities.Especificidade</class>
+        <class>entities.Siglaestado</class>
+        <class>entities.Tarefa</class>
+        <class>entities.Aluno</class>
+        <class>entities.Times</class>
+        <class>entities.Tabuser</class>
+        <class>entities.Docsoficiais</class>
+        <class>entities.Profissoes</class>
+        <class>entities.Formacao</class>
+        <class>entities.CepCidades</class>
+        <class>entities.CepLogradouros</class>
+        <class>entities.CepTipoLog</class>
+        <class>entities.CepBairros</class>
+        <class>entities.Perfilusers</class>
+        <class>entities.Modalidade</class>
+        <class>entities.Arqsys</class>
+        <class>entities.Tracking</class>
+        <class>entities.Cordapele</class>
+        <class>entities.Docinsc</class>
+        <class>entities.Docsalunos</class>
+        <class>entities.EsGrade</class>
+        <class>entities.EsGrade3</class>
+        <class>entities.EsTipodis</class>
+        <class>entities.EsCalendas</class>
+        <class>entities.EsFeriados</class>
+        <class>entities.EsFotosalunos</class>
+        <class>entities.EsSalas</class>
+        <class>entities.EsGradedisprg</class>
+        <class>entities.EsMatrisem</class>
+        <class>entities.EsPagamentosdetalhes</class>
+        <class>entities.EsRegaltnotas</class>
+        <class>entities.Esareceber</class>
+        <class>entities.Esformapagtomatrisem</class>
+        <class>entities.EsCategdis</class>
+        <class>entities.ListaCabec</class>
+        <class>entities.ListaAula</class>
+        <class>entities.ListaChamada</class>
+        <class>entities.EsEquivalencia</class>
+        <class>entities.EsEquivalenciadet</class>
+        <class>entities.Notifverfsao</class>
+        <class>entities.Listagens</class>
+        <class>entities.Tabbancos</class>
+        <class>entities.Impalunos</class>
+        <properties>
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/eved_05_05_2020?zeroDateTimeBehavior=convertToNull"/>
+            <property name="javax.persistence.jdbc.user" value="userdoe"/>
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+            <property name="javax.persistence.jdbc.password" value="icanenter"/>
+        </properties>
+    </persistence-unit>
+</persistence>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Point3D?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="597.0" prefWidth="1140.0" style="-fx-background-color: #60A41C;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Dispensa">
+   <children>
+      <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="322.0" prefWidth="561.0" style="-fx-background-color: #EEF3EB;" styleClass="text-field2" AnchorPane.bottomAnchor="7.0" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="7.0" AnchorPane.topAnchor="7.0">
+         <effect>
+            <DropShadow blurType="GAUSSIAN" color="#520b0b8f" height="6.0" radius="2.5" width="6.0" />
+         </effect>
+         <children>
+            <ComboBox fx:id="cbDisciplina" layoutX="313.0" layoutY="81.0" prefHeight="25.0" prefWidth="518.0" />
+            <ButtonBar buttonMinWidth="20.0" buttonOrder="" layoutX="894.0" layoutY="493.0" prefHeight="59.0" prefWidth="236.0" AnchorPane.rightAnchor="14.0">
+               <padding>
+                  <Insets left="5.0" right="5.0" />
+               </padding>
+               <buttons>
+                  <JFXButton fx:id="buConfirma" accessibleText="buConfirma" buttonType="RAISED" onAction="#clicouConfirma" prefHeight="34.0" prefWidth="120.0" style="-fx-background-color: #008F82;" styleClass="button-nav" text="Confirma" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="CHECK_SQUARE_ALT" size="16.0" styleClass="glyph-icon-nav" wrappingWidth="20.714285850524902" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="buCancela" accessibleText="buCancela" buttonType="RAISED" onAction="#clicouCancela" prefHeight="34.0" prefWidth="120.0" style="-fx-background-color: #EE4D39;" styleClass="button-nav" text="Cancela" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="CLOSE" size="16.0" styleClass="glyph-icon-nav" wrappingWidth="17.571428298950195" />
+                     </graphic>
+                  </JFXButton>
+               </buttons>
+            </ButtonBar>
+            <JFXButton fx:id="buRefDen" accessibleText="buInsereRec" buttonType="RAISED" contentDisplay="CENTER" layoutX="841.0" layoutY="81.0" maxHeight="23.0" maxWidth="23.0" minHeight="23.0" minWidth="23.0" onAction="#clicouRefreshDen" prefHeight="23.0" prefWidth="23.0" style="-fx-background-color: #2BB502;" styleClass="button-refresh" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView boundsType="LOGICAL_VERTICAL_CENTER" fill="WHITE" glyphName="REFRESH" size="14" styleClass="glyph-icon-nav" wrappingWidth="11.0">
+                     <rotationAxis>
+                        <Point3D />
+                     </rotationAxis>
+                  </FontAwesomeIconView>
+               </graphic>
+            </JFXButton>
+            <Label fx:id="lblAluno" layoutX="16.0" layoutY="125.0" text="Nome do Aluno" textFill="#386110">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="313.0" layoutY="61.0" text="Disciplina de que foi dispensado" />
+            <Label fx:id="lblTipo" layoutX="135.0" layoutY="14.0" text="Dispensa de Disciplina" textFill="#386110">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <FontAwesomeIconView fx:id="fvBoneco" fill="#60a41c" glyphName="USER" layoutX="25.0" layoutY="99.0" size="90" styleClass="glyph-icon-nav" text="" wrappingWidth="87.99999713897705" />
+            <ImageView fx:id="ivFotoAluno" fitHeight="104.0" fitWidth="91.0" layoutX="24.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true" />
+            <CheckBox fx:id="chkDocsDigi" layoutX="396.0" layoutY="398.0" mnemonicParsing="false" text="Os documentos que comprovam a dispensa foram digitalizados e lançados no sistema" />
+            <TextArea fx:id="taObs" layoutX="15.0" layoutY="419.0" prefHeight="123.0" prefWidth="860.0" AnchorPane.leftAnchor="15.0" />
+            <Label layoutX="16.0" layoutY="400.0" text="Observações" AnchorPane.leftAnchor="16.0" />
+            <TextField fx:id="lblRegistrosPro" editable="false" layoutY="595.0" maxHeight="25.0" minHeight="0.0" prefHeight="25.0" prefWidth="978.0" style="-fx-background-color: #ADD5AC;" text="Inserido por: nomeusuário   |   Data ins.: 11/08/2020   16h20  |  Alterado por: nomeusuário  |  Data alt.:  15/09/2020 14:15" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </TextField>
+            <TableView fx:id="tvDispensaDet" layoutX="15.0" layoutY="165.0" prefHeight="184.0" prefWidth="1114.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0">
+              <columns>
+                <TableColumn maxWidth="445.0" minWidth="445.0" prefWidth="445.0" text="Instituição" />
+                <TableColumn maxWidth="445.0" minWidth="445.0" prefWidth="445.0" text="Disciplina" />
+                  <TableColumn maxWidth="60.0" minWidth="60.0" prefWidth="60.0" text="Carga H." />
+                  <TableColumn maxWidth="45.0" minWidth="45.0" prefWidth="45.0" text="Créd." />
+                  <TableColumn maxWidth="60.0" minWidth="60.0" prefWidth="60.0" text="Ano" />
+                  <TableColumn maxWidth="40.0" minWidth="40.0" prefWidth="40.0" text="Nota" />
+              </columns>
+            </TableView>
+            <ButtonBar buttonMinWidth="20.0" buttonOrder="" layoutX="962.0" layoutY="104.0" prefHeight="59.0" prefWidth="156.0" AnchorPane.rightAnchor="10.0">
+               <buttons>
+                  <JFXButton accessibleText="buInsereRec" buttonType="RAISED" layoutX="148.0" layoutY="20.0" maxWidth="38.0" minWidth="30.0" onAction="#clicouInsereDisp" prefHeight="34.0" prefWidth="30.0" style="-fx-background-color: #0081FF;" styleClass="button-nav" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView boundsType="VISUAL" fill="WHITE" glyphName="FILE_ALT" size="16.0" styleClass="glyph-icon-nav" wrappingWidth="28.0" x="5.0" y="5.0" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton accessibleText="buEdita" buttonType="RAISED" layoutX="286.0" layoutY="20.0" maxWidth="38.0" minWidth="30.0" onAction="#clicouEditaDisp" prefHeight="34.0" prefWidth="30.0" style="-fx-background-color: #f39c12;" styleClass="button-nav" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView boundsType="VISUAL" fill="WHITE" glyphName="PENCIL_SQUARE_ALT" size="16.0" styleClass="glyph-icon-nav" wrappingWidth="21.571428298950195" x="5.0" y="5.0" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="buMinApa" accessibleText="buPesquisa" buttonType="RAISED" layoutX="30.0" layoutY="23.0" maxWidth="38.0" minWidth="30.0" onAction="#clicouApagaDisp" prefHeight="34.0" prefWidth="30.0" style="-fx-background-color: #6D1D28;" styleClass="button-nav" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView boundsType="VISUAL" fill="WHITE" glyphName="MINUS_CIRCLE" size="16.0" styleClass="glyph-icon-nav" wrappingWidth="21.571428298950195" x="5.0" y="5.0" />
+                     </graphic>
+                  </JFXButton>
+               </buttons>
+               <padding>
+                  <Insets left="5.0" right="5.0" />
+               </padding>
+            </ButtonBar>
+            <ComboBox fx:id="cbGrade" layoutX="135.0" layoutY="81.0" onAction="#mudouGrade" prefHeight="25.0" prefWidth="116.0" styleClass="meucombo" />
+            <Label layoutX="135.0" layoutY="61.0" text="Grade (Ano.Semestre)" />
+            <Label fx:id="lblPrograma" layoutX="16.0" layoutY="142.0" text="Nome do Programa" textFill="#386110">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Line fx:id="lineRed" endX="42.0" endY="-72.0" layoutX="82.0" layoutY="65.0" startX="-100.0" stroke="RED" strokeWidth="20.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="572.0" prefWidth="1193.0" style="-fx-background-color: #D1D6C7;" stylesheets="@../..resources/MeuCSS/meuCSS000.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CadAlunoController">
+   <children>
+      <Label layoutX="37.0" layoutY="40.0" text="Cadastro de Alunos" />
+      <TabPane layoutX="37.0" layoutY="21.0" prefHeight="524.0" prefWidth="1134.0" styleClass="card-unpadded" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Untitled Tab 1">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="214.0" prefWidth="491.0">
+                     <children>
+                        <AnchorPane layoutX="39.0" layoutY="41.0" prefHeight="413.0" prefWidth="1057.0" styleClass="card-unpadded" stylesheets="@../../../../Área%20de%20Trabalho/___NBP/A000_NovaFase/src/MeuCSS/meuCSS000.css">
+                           <children>
+                              <VBox layoutX="20.0" layoutY="14.0" prefHeight="380.0" prefWidth="415.0" spacing="10.0">
+                                 <children>
+                                    <JFXTextField focusColor="#00add8" labelFloat="true" promptText="First Name" unFocusColor="#868282" />
+                                    <JFXTextField focusColor="#00add8" labelFloat="true" layoutX="10.0" layoutY="10.0" promptText="Last Name" unFocusColor="#868282" />
+                                    <JFXTextField focusColor="#00add8" labelFloat="true" layoutX="10.0" layoutY="46.0" promptText="Email address" unFocusColor="#868282" />
+                                    <JFXTextField focusColor="#00add8" labelFloat="true" layoutX="10.0" layoutY="82.0" promptText="Phone Number" unFocusColor="#868282" />
+                                    <JFXTextField focusColor="#00add8" labelFloat="true" layoutX="10.0" layoutY="118.0" promptText="Identity Number" unFocusColor="#868282" />
+                                    <JFXTextArea maxWidth="404.0" minWidth="404.0" prefHeight="98.0" prefWidth="404.0" promptText="Additional Information" />
+                                 </children>
+                                 <padding>
+                                    <Insets left="20.0" top="10.0" />
+                                 </padding>
+                              </VBox>
+                              <VBox layoutX="525.0" layoutY="17.0" prefHeight="376.0" prefWidth="511.0" spacing="10.0">
+                                 <children>
+                                    <VBox prefHeight="82.0" prefWidth="541.0">
+                                       <children>
+                                          <Label style="-fx-text-fill: #868282;" text="Level of Specialization" />
+                                          <JFXComboBox fx:id="comboSpecialization" prefHeight="40.0" prefWidth="494.0">
+                                             <VBox.margin>
+                                                <Insets left="100.0" />
+                                             </VBox.margin>
+                                          </JFXComboBox>
+                                       </children>
+                                    </VBox>
+                                    <VBox layoutX="10.0" layoutY="10.0" prefHeight="82.0" prefWidth="541.0">
+                                       <children>
+                                          <Label prefHeight="20.0" prefWidth="112.0" style="-fx-text-fill: #868282;" text="Department" />
+                                          <JFXComboBox fx:id="comboDepartment" prefHeight="40.0" prefWidth="499.0">
+                                             <VBox.margin>
+                                                <Insets left="100.0" />
+                                             </VBox.margin>
+                                          </JFXComboBox>
+                                       </children>
+                                    </VBox>
+                                    <VBox layoutX="10.0" layoutY="92.0" prefHeight="82.0" prefWidth="541.0">
+                                       <children>
+                                          <Label prefHeight="20.0" prefWidth="222.0" style="-fx-text-fill: #868282;" text="Taking Appointments" />
+                                          <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="30.0">
+                                             <children>
+                                                <JFXRadioButton selected="true" text="YES">
+                                                   <toggleGroup>
+                                                      <ToggleGroup fx:id="q" />
+                                                   </toggleGroup>
+                                                </JFXRadioButton>
+                                                <JFXRadioButton layoutX="10.0" layoutY="10.0" text="NO" toggleGroup="$q" />
+                                             </children>
+                                             <padding>
+                                                <Insets left="100.0" right="20.0" />
+                                             </padding>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                    <Separator prefWidth="200.0" />
+                                    <HBox alignment="CENTER_RIGHT" prefHeight="77.0" prefWidth="511.0" spacing="20.0">
+                                       <children>
+                                          <JFXButton styleClass="cancel-button" text="Cancel" />
+                                          <JFXButton prefHeight="27.0" prefWidth="78.0" styleClass="green-btn" text="Edit" />
+                                          <JFXButton layoutX="72.0" layoutY="10.0" prefHeight="37.0" prefWidth="100.0" styleClass="blue-btn" text="Save" />
+                                       </children>
+                                       <padding>
+                                          <Insets right="20.0" />
+                                       </padding>
+                                    </HBox>
+                                 </children>
+                                 <padding>
+                                    <Insets left="20.0" top="20.0" />
+                                 </padding>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Untitled Tab 2">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="317.0" prefWidth="620.0" />
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

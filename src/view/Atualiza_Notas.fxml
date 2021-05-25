@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="619.0" prefWidth="760.0" style="-fx-background-color: #FF6600;" stylesheets="@../MeuCSS/Atu_NotasCSS.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Atualiza_Notas">
+   <children>
+      <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="550.0" prefWidth="889.0" style="-fx-background-color: #fbcdb7; -fx-background-radius: 8;" styleClass="text-field2" AnchorPane.bottomAnchor="7.0" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="7.0" AnchorPane.topAnchor="7.0">
+         <effect>
+            <DropShadow blurType="GAUSSIAN" color="#520b0b8f" height="6.0" radius="2.5" width="6.0" />
+         </effect>
+         <children>
+            <Label layoutX="74.0" layoutY="21.0" text="Situação do Aluno na Disciplina" textFill="#a84a22">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></Label>
+            <FontAwesomeIconView fill="#a84a22" glyphName="PENCIL_SQUARE" layoutX="24.0" layoutY="44.0" size="40" />
+            <GridPane layoutX="179.0" layoutY="66.0" prefHeight="153.0" prefWidth="426.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="92.0" minWidth="86.0" prefWidth="86.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="600.0" minWidth="10.0" prefWidth="589.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="Aluno">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
+                  <Label fx:id="lblAluno" text="Label" GridPane.columnIndex="1">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Label>
+                  <Label text="Disciplina" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
+                  <Label fx:id="lblDisciplina" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Label>
+                  <Label layoutX="10.0" layoutY="79.0" text="Programa" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
+                  <Label fx:id="lblPrograma" layoutX="107.0" layoutY="79.0" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label text="Professor" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="57.0" prefWidth="77.0" text="Localidade" GridPane.rowIndex="4">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblLocalidade" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblProfessor" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </GridPane>
+            <TextField fx:id="lblAutent" editable="false" layoutX="112.0" layoutY="709.0" prefHeight="29.0" prefWidth="714.0" style="-fx-background-color: #FFF;" styleClass="text" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </TextField>
+            <GridPane layoutX="379.0" layoutY="245.0" prefHeight="118.0" prefWidth="311.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="80.0" minWidth="80.0" prefWidth="80.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="70.0" minWidth="70.0" prefWidth="70.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.0" minWidth="95.0" prefWidth="95.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="Ano Letivo">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label text="Semestre" GridPane.columnIndex="2">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label text="Créditos" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label text="Carga Horária" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label text="Turno" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label text="Horário" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label text="Turma" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblTurma" prefHeight="33.0" prefWidth="59.0" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblHorario" text="Label" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblTurno" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblAnoLetivo" text="Label" GridPane.columnIndex="1">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblSemestre" text="Label" GridPane.columnIndex="3">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblCredito" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblCargaH" text="Label" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </GridPane>
+            <ImageView fx:id="ivFotoAluno" fitHeight="153.0" fitWidth="124.0" layoutX="24.0" layoutY="72.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="325.0" AnchorPane.leftAnchor="24.0" AnchorPane.rightAnchor="738.0" AnchorPane.topAnchor="72.0">
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect>
+            </ImageView>
+            <AnchorPane layoutX="24.0" layoutY="235.0" prefHeight="296.0" prefWidth="320.0" style="-fx-background-color: #FFF8F2; -fx-border-color: #973800; -fx-border-width: 3;">
+               <children>
+                  <GridPane layoutX="38.0" layoutY="21.0" prefHeight="207.0" prefWidth="246.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="132.0" minWidth="8.0" prefWidth="73.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="219.0" minWidth="10.0" prefWidth="173.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="46.0" minHeight="10.0" prefHeight="33.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="33.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="33.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label text="Média">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label text="Faltas" GridPane.rowIndex="1">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label text="Situação" GridPane.rowIndex="2">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label text="Frequência" GridPane.rowIndex="3">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="cbSituacao" onAction="#mudouTipo1" prefHeight="25.0" prefWidth="175.0" styleClass="combo" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <ComboBox fx:id="cbFrequencia" layoutX="90.0" layoutY="81.0" onAction="#mudouTipo2" prefHeight="25.0" prefWidth="175.0" styleClass="combo" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <TextField fx:id="ttfMedia" prefHeight="39.0" prefWidth="62.0" GridPane.columnIndex="1">
+                           <GridPane.margin>
+                              <Insets right="100.0" />
+                           </GridPane.margin>
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="ttfFaltas" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets right="120.0" />
+                           </GridPane.margin>
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <Label text="Tipo" GridPane.rowIndex="4">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="cbTipo" onAction="#mudouTipo3" prefHeight="25.0" prefWidth="175.0" styleClass="combo" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                     </children>
+                  </GridPane>
+                  <ButtonBar buttonMinWidth="20.0" buttonOrder="" layoutX="42.0" layoutY="223.0" prefHeight="59.0" prefWidth="239.0">
+                     <buttons>
+                        <JFXButton fx:id="buConfirma" accessibleText="buConfirma" buttonType="RAISED" onAction="#clicouConfNota" prefHeight="34.0" prefWidth="120.0" style="-fx-background-color: #008F82;" styleClass="button-nav" text="Confirma" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="CHECK_SQUARE_ALT" size="16.0" styleClass="glyph-icon-nav" wrappingWidth="20.714285850524902" />
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton fx:id="buCancela" accessibleText="buCancela" buttonType="RAISED" onAction="#clicouCancela" prefHeight="34.0" prefWidth="120.0" style="-fx-background-color: #EE4D39;" styleClass="button-nav" text="Cancela" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="CLOSE" size="16.0" styleClass="glyph-icon-nav" wrappingWidth="17.571428298950195" />
+                           </graphic>
+                        </JFXButton>
+                     </buttons>
+                     <padding>
+                        <Insets right="10.0" />
+                     </padding>
+                  </ButtonBar>
+               </children>
+            </AnchorPane>
+            <FontAwesomeIconView fx:id="fvBoneco" fill="#752d13" glyphName="USER" layoutX="48.0" layoutY="173.0" size="90" styleClass="glyph-icon-nav" wrappingWidth="52.99999713897705" />
+            <Label layoutX="373.0" layoutY="444.0" prefHeight="41.0" prefWidth="312.0" text="* Se o campo TIPO for &quot;O&quot;, o sistema ajustará Situação e &#10;Frequência para &quot;ouvinte&quot;." />
+            <Label layoutX="373.0" layoutY="485.0" prefHeight="41.0" prefWidth="312.0" text="* Se o campo TIPO for &quot;G&quot;, o sistema ajustará Situação e &#10;Frequência para &quot;gravação&quot;." />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

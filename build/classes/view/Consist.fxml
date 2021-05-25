@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="463.0" prefWidth="735.0" styleClass="tab-Pesquisa" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ConsistController">
+   <children>
+      <Pane maxHeight="40.0" minHeight="40.0" prefHeight="40.0" prefWidth="707.0" style="-fx-background-color: #C1C1C1;" styleClass="card-title" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label alignment="CENTER" layoutX="14.0" layoutY="18.0" text="Consistência dos dados dos alunos" textAlignment="CENTER">
+               <font>
+                  <Font name="Calibri" size="24.0" />
+               </font>
+            </Label>
+            <JFXButton accessibleText="buPesquisa" buttonType="RAISED" layoutX="598.0" layoutY="15.0" onAction="#clicouVerifica" prefHeight="34.0" prefWidth="117.0" style="-fx-background-color: #282828;" styleClass="button-nav" text="Verificar" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="CHECK_SQUARE_ALT" styleClass="glyph-icon-nav" wrappingWidth="17.214285850524902" />
+               </graphic>
+            </JFXButton>
+            <Label fx:id="lblRegs" alignment="CENTER" contentDisplay="CENTER" layoutX="598.0" layoutY="49.0" prefHeight="28.0" prefWidth="117.0" textAlignment="CENTER">
+               <font>
+                  <Font name="Calibri" size="12.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="taConsist" layoutX="488.0" layoutY="114.0" prefHeight="314.0" prefWidth="237.0" />
+            <TextField fx:id="edAluno" layoutX="108.0" layoutY="77.0" prefHeight="25.0" prefWidth="371.0" />
+            <TextField fx:id="edStatus" layoutX="488.0" layoutY="77.0" prefHeight="25.0" prefWidth="237.0" />
+         </children>
+      </Pane>
+      <TableView fx:id="tvPesquisa" layoutX="78.0" layoutY="118.0" prefHeight="314.0" prefWidth="477.0" AnchorPane.bottomAnchor="31.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="258.0" AnchorPane.topAnchor="118.0">
+         <columns>
+            <TableColumn fx:id="tcCod" prefWidth="74.0" text="Código" />
+            <TableColumn fx:id="tcAluno" prefWidth="101.0" text="Aluno" />
+            <TableColumn fx:id="tcStatus" prefWidth="111.0" text="Status" />
+            <TableColumn fx:id="tcConsist" prefWidth="200.0" text="Consistência" />
+         </columns>
+      </TableView>
+      <AnchorPane maxHeight="30.0" minHeight="20.0" prefHeight="30.0" prefWidth="707.0" style="-fx-background-color: #D0D9D9;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <TextField fx:id="lblRegistros" layoutX="35.0" prefHeight="29.0" prefWidth="217.0" style="-fx-background-color: #D3D3FF;" text="Registros" AnchorPane.leftAnchor="0.0">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </TextField>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

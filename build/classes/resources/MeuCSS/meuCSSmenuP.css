@@ -1,0 +1,103 @@
+.imageuser {
+    -fx-border-radius: 45%;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);
+    -fx-background-radius: 5;
+}
+
+.button:hover{
+    -fx-background-color : rgb(0, 75, 176);
+    -fx-text-fill : white; 
+}
+
+.button:hover .glyph-icon{
+  -fx-fill : white;  
+  }
+  
+  .button {
+      -fx-alignment : CENTER_LEFT;
+  }
+  
+.glyph-icon{
+   -fx-fill : #FF00BB;
+}
+
+.glyph-icon{
+   -fx-fill : white;
+}
+
+.glyph-icon2{
+   -fx-fill : #c2c4d7;
+}
+
+
+
+.menu{
+      -fx-font: bold 11pt "System";
+  }
+
+.menu-bar {
+    -fx-background-color: #e0ebeb;
+ 
+}
+
+/* Transparent Tabpane header */
+.jfx-tab-pane .headers-region{
+    -fx-background-color:transparent;
+}
+.jfx-tab-pane .tab-header-background{
+    -fx-background-color: transparent;
+}
+
+.nav-button:hover {
+    -fx-background-color:#222D32;
+}
+
+.nav-button {
+    -fx-background-color:#2A3F54;
+}
+
+.nav-button:pressed {
+    -fx-background-color:#2A3F54;
+
+}
+
+.custom-toolbar{
+    -fx-background-color: #1A2835;
+    
+}
+.jfx-hamburger StackPane {
+    -fx-background-color : #FFFFFF;
+}
+
+
+.card {
+    -fx-background-color: rgb(255.0, 255.0, 255.0);
+    -fx-background-radius: 4.0;
+    -fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.15), 6.0, 0.7, 0.0,1.5);
+    -fx-padding: 16 16 16 16;
+}
+.card-unpadded {
+    -fx-background-color: rgb(255.0, 255.0, 255.0);
+    -fx-background-radius: 4.0;
+    -fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.15), 6.0, 0.7, 0.0,
+        1.5);
+    -fx-padding: 0 0 0 0;
+}
+
+.card-title {
+    -fx-font-size: 20.0px;
+    -fx-padding: 5 0 5 0;
+}
+
+.card-title.text {
+    -fx-fill: -fx-text-title-color;
+}
+
+.card-subtitle {
+    -fx-font-size: 16.0px;
+    -fx-padding: 5 0 5 0;
+}
+
+.card-subtitle.text {
+    -fx-fill: -fx-text-subtitle-color;
+}

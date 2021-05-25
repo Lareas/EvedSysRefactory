@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="687.0" prefWidth="1298.0" stylesheets="@../..resources/MeuCSS/meuCSS000.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TabDis2Controller">
+    <children>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="tab-Pesquisa">
+                  <children>
+                      <Pane maxHeight="40.0" minHeight="40.0" prefHeight="40.0" prefWidth="707.0" style="-fx-background-color: #E7DAFC;" styleClass="card-title" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <children>
+                              <Label alignment="CENTER" layoutX="14.0" layoutY="18.0" text="Disciplinas" textAlignment="CENTER" textFill="#07525b">
+                                  <font>
+                                      <Font name="Calibri" size="24.0" />
+                                  </font>
+                              </Label>
+                              <JFXButton accessibleText="buPesquisa" buttonType="RAISED" layoutX="303.0" layoutY="18.0" onAction="#clicouMinhaPesq" onKeyPressed="#clicouMinhaPesqEnter" prefHeight="34.0" prefWidth="117.0" style="-fx-background-color: #8E64D7;" styleClass="button-nav" text="Pesquisa" textFill="WHITE">
+                                  <font>
+                                      <Font name="System Bold" size="13.0" />
+                                  </font>
+                                  <graphic>
+                                      <FontAwesomeIconView glyphName="SEARCH" wrappingWidth="17.142857551574707" />
+                                  </graphic>
+                              </JFXButton>
+                              <JFXButton accessibleText="buPesquisa" buttonType="RAISED" layoutX="429.0" layoutY="18.0" onAction="#clicouLimpa" prefHeight="34.0" prefWidth="117.0" style="-fx-background-color: #f39c12;" styleClass="button-nav" text="Limpa" textFill="WHITE">
+                                  <font>
+                                      <Font name="System Bold" size="13.0" />
+                                  </font>
+                                  <graphic>
+                                      <FontAwesomeIconView glyphName="CIRCLE_THIN" styleClass="glyph-icon-nav" wrappingWidth="17.214285850524902" />
+                                  </graphic>
+                              </JFXButton>
+                              <JFXButton accessibleText="buPesquisa" buttonType="RAISED" layoutX="730.0" layoutY="18.0" onAction="#clicouAbre" prefHeight="34.0" prefWidth="117.0" style="-fx-background-color: #008F82;" styleClass="button-nav" text="Abre" textFill="WHITE">
+                                  <font>
+                                      <Font name="System Bold" size="13.0" />
+                                  </font>
+                                  <graphic>
+                                      <FontAwesomeIconView glyphName="FOLDER_OPEN_ALT" styleClass="glyph-icon-nav" wrappingWidth="17.214285850524902" />
+                                  </graphic>
+                              </JFXButton>
+                  <TextField fx:id="resPesq" layoutX="26.0" layoutY="115.0" prefHeight="29.0" prefWidth="1103.0" style="-fx-background-color: #F2EAAA;" text="Pesquisa: " visible="false">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                     <effect>
+                        <Glow level="0.41" />
+                     </effect>
+                  </TextField>
+                  <AnchorPane layoutX="1144.0" layoutY="14.0" maxHeight="136.0" maxWidth="123.0" prefHeight="132.0" prefWidth="123.0">
+                     <children>
+                        <ProgressIndicator fx:id="piFiltrados" layoutX="13.0" prefHeight="107.0" prefWidth="111.0" progress="0.62" styleClass="text-field3" />
+                        <Label fx:id="lblFiltrados" layoutY="108.0" prefHeight="20.0" prefWidth="136.0" styleClass="text-field3" text="100" />
+                     </children>
+                  </AnchorPane>
+                  <JFXButton fx:id="buInsere" accessibleText="buInsereRec" buttonType="RAISED" layoutX="605.0" layoutY="18.0" onAction="#clicouInsere" prefHeight="34.0" prefWidth="117.0" style="-fx-background-color: #0081FF;" styleClass="button-nav" text="Insere" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="FILE_ALT" size="16.0" styleClass="glyph-icon-nav" wrappingWidth="21.571428298950195" />
+                     </graphic>
+                  </JFXButton>
+                          </children>
+                      </Pane>
+                      <TableView fx:id="tvPesquisa" layoutX="78.0" layoutY="158.0" prefHeight="498.0" prefWidth="1298.0" AnchorPane.bottomAnchor="31.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="158.0">
+                          <contextMenu>
+                              <ContextMenu>
+                                  <items>
+                                      <MenuItem mnemonicParsing="false" onAction="#clicouAbre" text="Abre este registro" />
+                                  </items>
+                              </ContextMenu>
+                          </contextMenu>
+               <columns>
+                  <TableColumn fx:id="tc1" prefWidth="53.0" text="Disc Id" />
+                  <TableColumn fx:id="tc2" prefWidth="500.0" text="Discipina" />
+                  <TableColumn fx:id="tc3" prefWidth="57.0" text="Crédito" />
+                  <TableColumn fx:id="tc4" prefWidth="57.0" text="Carga H" />
+                  <TableColumn fx:id="tc5" prefWidth="200.0" text="Especificidade" />
+                  <TableColumn fx:id="tc6" prefWidth="200.0" text="Descrição" />
+                  <TableColumn fx:id="tc7" prefWidth="200.0" text="Ementa" />
+               </columns>
+                      </TableView>
+                      <HBox alignment="CENTER_LEFT" layoutY="62.0" prefHeight="47.0" prefWidth="1129.0" spacing="40.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="169.0" AnchorPane.topAnchor="62.0">
+                          <children>
+                              <JFXComboBox fx:id="cbIndice1" prefHeight="25.0" prefWidth="145.0" promptText="Campo 1" />
+                              <JFXComboBox fx:id="cbCondicao1" layoutX="285.0" layoutY="27.0" prefHeight="25.0" prefWidth="100.0" promptText="Condição 1" />
+                              <JFXTextField fx:id="txtPesq1" alignment="TOP_LEFT" labelFloat="true" prefHeight="25.0" prefWidth="130.0" promptText="Conteúdo a pesquisar 1" />
+                  <HBox prefHeight="47.0" prefWidth="163.0" spacing="20.0">
+                     <padding>
+                        <Insets top="14.0" />
+                     </padding>
+                     <children>
+                        <RadioButton layoutX="10.0" layoutY="24.0" mnemonicParsing="false" selected="true" text="1">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <toggleGroup>
+                              <ToggleGroup fx:id="group1" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="rbE" mnemonicParsing="false" text="E" toggleGroup="$group1">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </RadioButton>
+                        <RadioButton fx:id="rbOu" mnemonicParsing="false" prefHeight="15.0" prefWidth="61.0" text="OU" toggleGroup="$group1">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </RadioButton>
+                     </children>
+                  </HBox>
+                  <JFXComboBox fx:id="cbIndice2" layoutX="40.0" layoutY="21.0" prefHeight="25.0" prefWidth="145.0" promptText="Campo 2" />
+                  <JFXComboBox fx:id="cbCondicao2" layoutX="200.0" layoutY="21.0" prefHeight="25.0" prefWidth="100.0" promptText="Condição 2" />
+                  <JFXTextField fx:id="txtPesq2" alignment="TOP_LEFT" labelFloat="true" layoutX="362.0" layoutY="21.0" prefHeight="25.0" prefWidth="130.0" promptText="Conteúdo a pesquisar 2" />
+                          </children>
+                          <padding>
+                              <Insets left="30.0" />
+                          </padding>
+                      </HBox>
+                      <AnchorPane maxHeight="30.0" minHeight="20.0" prefHeight="30.0" prefWidth="707.0" style="-fx-background-color: #D0D9D9;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                          <children>
+                              <TextField fx:id="lblRegistros" layoutX="35.0" prefHeight="29.0" prefWidth="714.0" style="-fx-background-color: #D3D3FF;" text="Registros" AnchorPane.leftAnchor="0.0">
+                                  <font>
+                                      <Font name="System Bold" size="13.0" />
+                                  </font>
+                              </TextField>
+                          </children>
+                      </AnchorPane>
+                  </children>
+              </AnchorPane>
+    </children>
+</StackPane>

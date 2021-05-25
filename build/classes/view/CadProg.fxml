@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Point3D?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="636.0" prefWidth="1115.0" style="-fx-background-color: #EEEEEE;" stylesheets="@../MeuCSS/DadosCadastraisCSS.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CadProgController">
+   <children>
+      <TabPane prefHeight="474.0" prefWidth="1099.0" style="-fx-background-color: #E9D0BE;" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0">
+         <tabs>
+            <Tab text="Programa">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="403.0" prefWidth="984.0">
+                     <children>
+                        <Label layoutX="26.0" layoutY="63.0" text="Curso" />
+                        <ComboBox fx:id="cbCurso" layoutX="95.0" layoutY="56.0" prefHeight="30.0" prefWidth="301.0" styleClass="jfx-combo-box" />
+                        <FontAwesomeIconView fill="#1874d8" glyphName="LIST_ALT" layoutX="24.0" layoutY="40.0" size="25" styleClass="glyph-icon2" wrappingWidth="39.99999165534973" />
+                        <Label layoutX="515.0" layoutY="61.0" text="Ano Letivo" />
+                        <TextField fx:id="edAnoLetivo" layoutX="601.0" layoutY="53.0" prefHeight="30.0" prefWidth="48.0" />
+                        <Label layoutX="678.0" layoutY="58.0" text="Semestre" />
+                        <Label layoutX="516.0" layoutY="100.0" text="Data Cadastro" />
+                        <JFXDatePicker fx:id="dpDataCad" layoutX="601.0" layoutY="89.0" prefHeight="25.0" prefWidth="107.0" />
+                        <TextField fx:id="tfNomePrograma" alignment="CENTER" layoutX="95.0" layoutY="19.0" prefHeight="30.0" prefWidth="301.0" style="-fx-background-color: #CBCBE4;" styleClass="infoTop" text="CODREG">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="26.0" layoutY="101.0" text="Localidade" />
+                        <ComboBox fx:id="cbLocalidade" layoutX="95.0" layoutY="94.0" prefHeight="30.0" prefWidth="301.0" styleClass="jfx-combo-box" />
+                        <ComboBox fx:id="cbSemestre" layoutX="737.0" layoutY="53.0" prefHeight="30.0" prefWidth="54.0" styleClass="jfx-combo-box" />
+                        <Label layoutX="826.0" layoutY="58.0" text="Duração" />
+                        <ComboBox fx:id="cbDuracao" layoutX="882.0" layoutY="53.0" prefHeight="30.0" prefWidth="100.0" styleClass="jfx-combo-box" />
+                        <TextField fx:id="tfNomePrograma1" alignment="CENTER" layoutX="26.0" layoutY="143.0" prefHeight="25.0" prefWidth="210.0" style="-fx-background-color: #CBCBE4;" styleClass="infoTop" text="SITUAÇÃO CADASTRAL">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="26.0" layoutY="189.0" text="Cursando" />
+                        <JFXDatePicker fx:id="dpCursando" layoutX="111.0" layoutY="178.0" prefHeight="25.0" prefWidth="107.0" />
+                        <Label layoutX="26.0" layoutY="225.0" text="Reativado" />
+                        <JFXDatePicker fx:id="dpReativado" layoutX="111.0" layoutY="213.0" prefHeight="25.0" prefWidth="107.0" />
+                        <Label layoutX="26.0" layoutY="260.0" text="Trancamento" />
+                        <JFXDatePicker fx:id="dpTrancamento" layoutX="111.0" layoutY="248.0" prefHeight="25.0" prefWidth="107.0" />
+                        <Label layoutX="246.0" layoutY="187.0" text="Desistência" />
+                        <JFXDatePicker fx:id="dpDesist" layoutX="331.0" layoutY="176.0" prefHeight="25.0" prefWidth="107.0" />
+                        <Label layoutX="246.0" layoutY="223.0" text="Abandono" />
+                        <JFXDatePicker fx:id="dpAband" layoutX="331.0" layoutY="211.0" prefHeight="25.0" prefWidth="107.0" />
+                        <Label layoutX="246.0" layoutY="258.0" text="Colação Grau" />
+                        <JFXDatePicker fx:id="dpColacao" layoutX="331.0" layoutY="246.0" prefHeight="25.0" prefWidth="107.0" />
+                        <AnchorPane layoutX="602.0" layoutY="171.0" prefHeight="100.0" prefWidth="377.0" style="-fx-background-color: #F0F0F0;" styleClass="text-field2">
+                           <effect>
+                              <DropShadow blurType="GAUSSIAN" color="#520b0b8f" height="6.0" radius="2.5" width="6.0" />
+                           </effect>
+                           <children>
+                              <Label layoutX="65.0" layoutY="22.0" text="Situação" />
+                              <FontAwesomeIconView fill="#1874d8" glyphName="TASKS" layoutX="18.0" layoutY="48.0" size="28" styleClass="glyph-icon2" wrappingWidth="39.99999165534973" />
+                              <ComboBox fx:id="cbSituacao" layoutX="65.0" layoutY="43.0" prefHeight="30.0" prefWidth="285.0" styleClass="jfx-combo-box" />
+                           </children>
+                        </AnchorPane>
+                        <TextArea fx:id="taObs" layoutX="111.0" layoutY="294.0" prefHeight="90.0" prefWidth="871.0" />
+                        <Label layoutX="28.0" layoutY="294.0" text="Observações" />
+                        <JFXButton fx:id="buRefUFAluno" accessibleText="buInsereRec" buttonType="RAISED" contentDisplay="CENTER" layoutX="406.0" layoutY="60.0" maxHeight="23.0" maxWidth="23.0" minHeight="23.0" minWidth="23.0" onAction="#clicouRefresUFResid" prefHeight="23.0" prefWidth="23.0" style="-fx-background-color: #2BB502;" styleClass="button-refresh" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIconView boundsType="LOGICAL_VERTICAL_CENTER" fill="WHITE" glyphName="REFRESH" size="14" styleClass="glyph-icon-nav" wrappingWidth="11.0">
+                                 <rotationAxis>
+                                    <Point3D />
+                                 </rotationAxis>
+                              </FontAwesomeIconView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton fx:id="buRefUFAluno1" accessibleText="buInsereRec" buttonType="RAISED" contentDisplay="CENTER" layoutX="406.0" layoutY="97.0" maxHeight="23.0" maxWidth="23.0" minHeight="23.0" minWidth="23.0" onAction="#clicouRefresUFResid" prefHeight="23.0" prefWidth="23.0" style="-fx-background-color: #2BB502;" styleClass="button-refresh" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIconView boundsType="LOGICAL_VERTICAL_CENTER" fill="WHITE" glyphName="REFRESH" size="14" styleClass="glyph-icon-nav" wrappingWidth="11.0">
+                                 <rotationAxis>
+                                    <Point3D />
+                                 </rotationAxis>
+                              </FontAwesomeIconView>
+                           </graphic>
+                        </JFXButton>
+                        <ComboBox fx:id="cbEspec" layoutX="451.0" layoutY="16.0" prefHeight="30.0" prefWidth="301.0" styleClass="jfx-combo-box" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Vestibular e Matrícula">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="171.0" prefWidth="462.0">
+                     <children>
+                        <Label layoutX="790.0" layoutY="11.0" text="Data Emissão" visible="false" />
+                        <TextField fx:id="tfNomePrograma11" alignment="CENTER" layoutX="64.0" layoutY="19.0" prefHeight="25.0" prefWidth="275.0" style="-fx-background-color: #CBCBE4;" styleClass="infoTop" text="RELAÇÃO DE DOCUMENTOS EXIGIDOS">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </TextField>
+                        <FontAwesomeIconView fill="#1874d8" glyphName="FILE_TEXT" layoutX="24.0" layoutY="40.0" size="25" styleClass="glyph-icon2" wrappingWidth="39.99999165534973" />
+                        <GridPane layoutX="87.0" layoutY="64.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="130.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="20.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="200.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="20.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <CheckBox fx:id="chkFoto" mnemonicParsing="false" text="Foto 3x4" />
+                              <CheckBox fx:id="chkHist2" layoutX="10.0" layoutY="17.0" mnemonicParsing="false" text="Histórico 2º grau" GridPane.rowIndex="1" />
+                              <CheckBox fx:id="chkHist3" layoutX="10.0" layoutY="17.0" mnemonicParsing="false" text="Histórico 3º grau" GridPane.rowIndex="2" />
+                              <CheckBox fx:id="chkFotRG" layoutX="10.0" layoutY="17.0" mnemonicParsing="false" text="Fotocópia do RG" GridPane.rowIndex="3" />
+                              <CheckBox fx:id="chkFotCpf" layoutX="10.0" layoutY="17.0" mnemonicParsing="false" text="Fotocópia CPF" GridPane.columnIndex="2" />
+                              <CheckBox fx:id="chkReq" layoutX="10.0" layoutY="17.0" mnemonicParsing="false" text="Requerimento Matrícula" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                              <CheckBox fx:id="chkQuest" layoutX="10.0" layoutY="17.0" mnemonicParsing="false" text="Questionário" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                              <CheckBox fx:id="chkCarta" layoutX="10.0" layoutY="17.0" mnemonicParsing="false" text="Carta de Recomendação" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                           </children>
+                        </GridPane>
+                        <TextField fx:id="tfNomePrograma111" alignment="CENTER" layoutX="500.0" layoutY="19.0" prefHeight="25.0" prefWidth="339.0" style="-fx-background-color: #CBCBE4;" styleClass="infoTop" text="VESTIBULAR">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </TextField>
+                        <Label fx:id="dpDataVest" layoutX="647.0" layoutY="67.0" text="Data Vestibular" />
+                        <TextField fx:id="edMediaFinal" layoutX="574.0" layoutY="60.0" prefHeight="30.0" prefWidth="48.0" />
+                        <Label layoutX="500.0" layoutY="67.0" text="Média Final" />
+                        <JFXDatePicker fx:id="dpNasc2" layoutX="737.0" layoutY="63.0" prefHeight="25.0" prefWidth="107.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Registro em Disciplinas">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <AnchorPane layoutX="58.0" layoutY="13.0" prefHeight="373.0" prefWidth="984.0" style="-fx-background-color: #F0F0F0;" styleClass="text-field2" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="13.0">
+                           <effect>
+                              <DropShadow blurType="GAUSSIAN" color="#520b0b8f" height="6.0" radius="2.5" width="6.0" />
+                           </effect>
+                           <children>
+                              <TextField fx:id="lblRegistrosMin" prefHeight="29.0" prefWidth="714.0" style="-fx-background-color: #D3D3FF;" text="Registros" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </TextField>
+                              <TableView fx:id="tvRegDis" layoutX="1.0" layoutY="94.0" prefHeight="308.0" prefWidth="1099.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="-1.0">
+                                 <columns>
+                                    <TableColumn fx:id="tcDis" prefWidth="240.0" text="Disciplina" />
+                                    <TableColumn fx:id="tcProf" prefWidth="180.0" text="Professor" />
+                                    <TableColumn fx:id="tcMed" prefWidth="44.0" text="Média" />
+                                    <TableColumn fx:id="tcFal" prefWidth="44.0" text="Faltas" />
+                                    <TableColumn fx:id="tcSit" prefWidth="149.0" text="Situação" />
+                                    <TableColumn fx:id="tcFreq" prefWidth="70.0" text="Frequência" />
+                                    <TableColumn fx:id="tcCre" prefWidth="60.0" text="Crédito" />
+                                    <TableColumn fx:id="tcCar" prefWidth="60.0" text="Carga H" />
+                                    <TableColumn fx:id="tcAno" prefWidth="60.0" text="Ano Let" />
+                                    <TableColumn fx:id="tcSem" prefWidth="60.0" text="Sem" />
+                                    <TableColumn fx:id="tcSup" prefWidth="94.0" text="Supervisionada" />
+                                 </columns>
+                              </TableView>
+                              <AnchorPane layoutX="56.0" layoutY="10.0" prefHeight="75.0" prefWidth="501.0" style="-fx-background-color: #FFF;" styleClass="text-field3">
+                                 <children>
+                                    <ComboBox fx:id="cbAnoFiltro" layoutX="17.0" layoutY="30.0" prefHeight="30.0" prefWidth="80.0" />
+                                    <RadioButton fx:id="rb1Sem" layoutX="115.0" layoutY="15.0" mnemonicParsing="false" text="1º semestre">
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="g1" />
+                                       </toggleGroup>
+                                    </RadioButton>
+                                    <RadioButton fx:id="rb2Sem" layoutX="115.0" layoutY="40.0" mnemonicParsing="false" text="2º semestre" toggleGroup="$g1" />
+                                    <Label layoutX="18.0" layoutY="12.0" text="Ano" />
+                                    <JFXButton accessibleText="buInsereRec" buttonType="RAISED" layoutX="233.0" layoutY="23.0" onAction="#clicouFiltra" prefHeight="34.0" prefWidth="117.0" style="-fx-background-color: #8956A5;" styleClass="button-nav" text="Filtra" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                       <graphic>
+                                          <FontAwesomeIconView fill="WHITE" glyphName="FILTER" size="20" styleClass="glyph-icon-nav" wrappingWidth="21.571428298950195" />
+                                       </graphic>
+                                    </JFXButton>
+                                    <JFXButton accessibleText="buPesquisa" buttonType="RAISED" layoutX="368.0" layoutY="23.0" onAction="#clicouLimpa" prefHeight="34.0" prefWidth="117.0" style="-fx-background-color: #f39c12;" styleClass="button-nav" text="Limpa" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                       <graphic>
+                                          <FontAwesomeIconView fill="WHITE" glyphName="CIRCLE_THIN" styleClass="glyph-icon-nav" wrappingWidth="17.214285850524902" />
+                                       </graphic>
+                                    </JFXButton>
+                                 </children>
+                                 <effect>
+                                    <DropShadow blurType="GAUSSIAN" color="#520b0b8f" height="6.0" radius="2.5" width="6.0" />
+                                 </effect>
+                              </AnchorPane>
+                              <FontAwesomeIconView fill="#1874d8" glyphName="BOOK" layoutX="20.0" layoutY="43.0" size="30" styleClass="glyph-icon2" wrappingWidth="35.99998354911804" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Biografia Reilgiosa">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+               </content>
+            </Tab>
+            <Tab text="Relatórios">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="263.0" prefWidth="984.0" />
+               </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+      <AnchorPane layoutX="-37.0" layoutY="-2.0" prefHeight="111.0" prefWidth="980.0" style="-fx-background-color: #F3E0D1;" styleClass="text-field2" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+         <effect>
+            <DropShadow blurType="GAUSSIAN" color="#520b0b8f" height="6.0" radius="2.5" width="6.0" />
+         </effect>
+         <children>
+            <ButtonBar buttonOrder="" layoutX="330.0" layoutY="13.0" prefHeight="59.0" prefWidth="650.0" AnchorPane.leftAnchor="330.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="13.0">
+               <buttons>
+                  <JFXButton fx:id="buInsere" accessibleText="buInsereRec" buttonType="RAISED" layoutX="148.0" layoutY="20.0" onAction="#clicouInsere" prefHeight="34.0" prefWidth="100.0" style="-fx-background-color: #0081FF;" styleClass="button-nav" text="Insere" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="FILE_ALT" size="16.0" styleClass="glyph-icon-nav" wrappingWidth="21.571428298950195" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="buEdita" accessibleText="buEdita" buttonType="RAISED" layoutX="286.0" layoutY="20.0" onAction="#clicouEdita" prefHeight="34.0" prefWidth="100.0" style="-fx-background-color: #f39c12;" styleClass="button-nav" text="Edita" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="PENCIL_SQUARE_ALT" size="16.0" styleClass="glyph-icon-nav" wrappingWidth="21.571428298950195" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="buConfirma" accessibleText="buConfirma" buttonType="RAISED" disable="true" layoutX="183.0" layoutY="20.0" onAction="#clicouConfirma" prefHeight="34.0" prefWidth="100.0" style="-fx-background-color: #008F82;" styleClass="button-nav" text="Confirma" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="CHECK_SQUARE_ALT" size="16.0" styleClass="glyph-icon-nav" wrappingWidth="20.714285850524902" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="buCancela" accessibleText="buCancela" buttonType="RAISED" disable="true" layoutX="304.0" layoutY="24.0" onAction="#clicouCancela" prefHeight="34.0" prefWidth="100.0" style="-fx-background-color: #EE4D39;" styleClass="button-nav" text="Cancela" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="CLOSE" size="16.0" styleClass="glyph-icon-nav" wrappingWidth="17.571428298950195" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="buApaga" accessibleText="buPesquisa" buttonType="RAISED" layoutX="30.0" layoutY="23.0" onAction="#clicouApaga" prefHeight="34.0" prefWidth="100.0" style="-fx-background-color: #6D1D28;" styleClass="button-nav" text="Apaga" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="MINUS_CIRCLE" size="16.0" styleClass="glyph-icon-nav" wrappingWidth="21.571428298950195" />
+                     </graphic>
+                  </JFXButton>
+               </buttons>
+               <padding>
+                  <Insets left="10.0" right="20.0" />
+               </padding>
+            </ButtonBar>
+            <Label alignment="CENTER" layoutX="14.0" layoutY="6.0" text="Cadastro do Programa" textAlignment="CENTER" textFill="#85450c">
+               <font>
+                  <Font name="Calibri Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tfCodCadProg" alignment="CENTER" layoutX="63.0" layoutY="29.0" prefHeight="25.0" prefWidth="88.0" style="-fx-background-color: #CBCBE4;" styleClass="infoTop" text="CODREG">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </TextField>
+            <Label layoutX="15.0" layoutY="77.0" text="Nome:" />
+            <Label layoutX="15.0" layoutY="35.0" text="Código" />
+            <TextField fx:id="tfNomeAluno" alignment="CENTER" layoutX="63.0" layoutY="72.0" prefHeight="30.0" prefWidth="514.0" style="-fx-background-color: #CBCBE4;" styleClass="infoTop" text="CODREG">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </TextField>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

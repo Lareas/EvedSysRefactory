@@ -1,0 +1,17 @@
+.custom-align { 
+  -fx-alignment: center-right; 
+} 
+
+.my-special-column-style .label {
+  -fx-alignment: CENTER;
+ /* -fx-text-fill: blue;*/
+}
+
+.my-special-column-style .custom-align {
+  -fx-alignment: CENTER;
+ /* -fx-text-fill: blue;*/
+}
+
+#tvAulas.table-column {
+  -fx-alignment: CENTER-RIGHT;
+}

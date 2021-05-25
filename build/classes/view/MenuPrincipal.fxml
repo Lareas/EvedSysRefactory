@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import com.jfoenix.controls.JFXProgressBar?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import de.jensd.fx.glyphs.materialicons.MaterialIconView?>
+<?import de.jensd.fx.glyphs.octicons.OctIconView?>
+<?import de.jensd.fx.glyphs.weathericons.WeatherIconView?>
+<?import javafx.geometry.Point3D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.input.KeyCodeCombination?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="564.0" prefWidth="1005.0" style="-fx-background-color: #D7DBDF;" styleClass="anchor-pane" stylesheets="@../..resources/MeuCSS/meuCSS000.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MenuPrincipalController">
+   <children>
+      <AnchorPane fx:id="apBarraSup" prefHeight="79.0" prefWidth="1050.0" style="-fx-background-color: #3c5a77;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="58.0" layoutY="26.0" text="Eved Sys" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER_LEFT" layoutX="656.0" layoutY="9.0" prefHeight="61.0" prefWidth="343.0" spacing="15.0" AnchorPane.rightAnchor="20.0">
+               <children>
+                  <FontAwesomeIconView fx:id="faiSino" accessibleText="Sininho" fill="WHITE" glyphName="BELL_ALT" size="20" />
+                  <FontAwesomeIconView fx:id="faiHome" fill="WHITE" glyphName="HOME" size="24" />
+                  <OctIconView glyphName="SIGN_OUT" size="20" />
+                  <StackPane prefHeight="61.0" prefWidth="59.0" styleClass="imageuser">
+                     <children>
+                        <ImageView id="imageuser" fx:id="ivUser" fitHeight="57.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true" styleClass="imageuser">
+                           <image>
+                              <Image url="@../Icons/admin.png" />
+                           </image>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </ImageView>
+                     </children>
+                  </StackPane>
+                  <FontAwesomeIconView fill="WHITE" glyphName="PASTE" layoutX="316.0" layoutY="49.0" onMouseClicked="#clicouTrocaSenha" size="20" />
+                  <FontAwesomeIconView fx:id="faiCadeado" fill="WHITE" glyphName="UNLOCK" size="24" />
+               </children>
+            </HBox>
+            <Label fx:id="txtSTSC" layoutX="6.0" layoutY="3.0" text="Seminário Teológico Servo de Cristo" textFill="#adccf5">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <JFXHamburger fx:id="hamburger" layoutX="17.0" layoutY="34.0" prefHeight="20.0" prefWidth="24.0" />
+            <Label fx:id="lblVersao" layoutX="6.0" layoutY="60.0" text="versão " textFill="#8aadcd" AnchorPane.leftAnchor="6.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblJPA" layoutX="156.0" layoutY="60.0" textFill="#8aadcd">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="394.0" layoutY="364.0" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #F1E8C9;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Label fx:id="lblUser" alignment="CENTER_RIGHT" layoutX="842.0" layoutY="18.0" prefHeight="20.0" prefWidth="149.0" text="Nome do usuário" textAlignment="RIGHT" textFill="#070000" AnchorPane.bottomAnchor="2.0" AnchorPane.rightAnchor="4.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblHoje" alignment="CENTER_RIGHT" layoutX="842.0" layoutY="1.0" prefHeight="20.0" prefWidth="149.0" text="Hoje" textAlignment="RIGHT" textFill="#070000" AnchorPane.rightAnchor="4.0" />
+            <AnchorPane fx:id="apCalculando" layoutX="24.0" layoutY="2.0" prefHeight="33.0" prefWidth="424.0" visible="false">
+               <children>
+                  <JFXProgressBar layoutX="1.0" layoutY="10.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                  <Label fx:id="lblACOuv1" alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="9.0" prefHeight="20.0" prefWidth="248.0" styleClass="placar-label" text="Calculando assentos..." textAlignment="CENTER" textFill="#2b6b56" AnchorPane.bottomAnchor="4.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children></AnchorPane>
+      <MenuBar fx:id="mnMenuBar" layoutY="79.0">
+        <menus>
+            <Menu fx:id="mnTabBas" mnemonicParsing="false" text="Tabelas Básicas">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#clicouCat" text="Categorias" />
+                  <MenuItem mnemonicParsing="false" onAction="#clicouEstCivil" text="Estado Civil" />
+                  <MenuItem mnemonicParsing="false" onAction="#clicouFormacoes" text="Formações" />
+                  <MenuItem mnemonicParsing="false" onAction="#clicouFre" text="Frequência" />
+                  <MenuItem mnemonicParsing="false" onAction="#clicouProfissoes" text="Profissões" />
+                  <MenuItem mnemonicParsing="false" onAction="#clicouSexo" text="Sexo" />
+                  <MenuItem mnemonicParsing="false" onAction="#clicouUF" text="Siglas UF" />
+                  <MenuItem mnemonicParsing="false" onAction="#clicouSit" text="Situação do Aluno no Programa" />
+                  <MenuItem mnemonicParsing="false" onAction="#clicouSitDis" text="Situação do Aluno na Disciplina" />
+                  <MenuItem mnemonicParsing="false" onAction="#clicouTip" text="Tipos de Trabalho" />
+                  <MenuItem fx:id="mnDocInsc" mnemonicParsing="false" onAction="#clicouDocInsc" text="Tipos de Documentos dos Alunos" />
+                  <MenuItem fx:id="mnOutrosDocs" mnemonicParsing="false" onAction="#clicouTipoDoc" text="Outros tipos de documentos" />
+                  <MenuItem mnemonicParsing="false" onAction="#clicouTurma" text="Turmas" />
+                  <MenuItem mnemonicParsing="false" onAction="#clicouTurno" text="Turnos" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem fx:id="mnSair1" mnemonicParsing="false" onAction="#clicouSair" text="Sair do Sistema">
+                     <accelerator>
+                        <KeyCodeCombination alt="DOWN" code="X" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+               </items>
+            </Menu>
+          <Menu fx:id="mnTabMas" mnemonicParsing="false" text="Tabelas Master">
+            <items>
+                  <MenuItem mnemonicParsing="false" onAction="#clicouDen" text="Denominações" />
+                  <MenuItem mnemonicParsing="false" onAction="#clicouEsp" text="Especificidades" />
+                  <MenuItem mnemonicParsing="false" onAction="#clicouLoc" text="Localidades" />
+                  <MenuItem mnemonicParsing="false" onAction="#clicouMin" text="Ministeriais" />
+                  <MenuItem mnemonicParsing="false" onAction="#clicouNac" text="Nacionalidades" />
+                  <MenuItem fx:id="mnTabProg" mnemonicParsing="false" onAction="#clicouPro" text="Níveis de Programas">
+                     <accelerator>
+                        <KeyCodeCombination alt="DOWN" code="P" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+            </items>
+          </Menu>
+            <Menu fx:id="mnAca" mnemonicParsing="false" text="Acadêmico">
+               <items>
+                  <MenuItem fx:id="mnGrade" mnemonicParsing="false" onAction="#clicouGrade" text="Grade do Semestre">
+                     <accelerator>
+                        <KeyCodeCombination alt="DOWN" code="G" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+                  <MenuItem fx:id="mnTipoDis" mnemonicParsing="false" onAction="#clicouTipoDis" text="Tipos de Disciplinas" />
+               </items>
+            </Menu>
+          <Menu fx:id="mnCad" mnemonicParsing="false" text="Cadastros">
+            <items>
+                  <MenuItem mnemonicParsing="false" onAction="#clicouAlunosSimples" text="Alunos (simples)">
+                     <accelerator>
+                        <KeyCodeCombination alt="DOWN" code="S" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+                  <MenuItem mnemonicParsing="false" onAction="#clicouAlunos" text="Alunos (completo)">
+                     <accelerator>
+                        <KeyCodeCombination alt="DOWN" code="A" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+                  <MenuItem fx:id="mnTabDisc" mnemonicParsing="false" onAction="#clicouTabDis" text="Disciplinas">
+                     <accelerator>
+                        <KeyCodeCombination alt="DOWN" code="D" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+              <MenuItem mnemonicParsing="false" onAction="#clicouCadCur" text="Programas">
+                     <accelerator>
+                        <KeyCodeCombination alt="DOWN" code="C" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+                  <MenuItem mnemonicParsing="false" onAction="#clicouCadProf" text="Professores">
+                     <accelerator>
+                        <KeyCodeCombination alt="DOWN" code="R" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+            </items>
+          </Menu>
+          <Menu fx:id="mnConf" mnemonicParsing="false" text="Administração">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#clicuPerfil" text="Perfis de Usuários" />
+                  <MenuItem mnemonicParsing="false" onAction="#clicouUsers" text="Usuários" />
+                  <MenuItem mnemonicParsing="false" onAction="#clicouTracking" text="Rastreamento" />
+                  <MenuItem fx:id="mnConsist" mnemonicParsing="false" onAction="#clicouConsistAlunos" text="Consistência dos dados dos alunos" />
+                  <MenuItem fx:id="mnSecretCase" mnemonicParsing="false" onAction="#clicouSecretCase" text="Secret Case" />
+                  <MenuItem fx:id="mnDataNascSophia" mnemonicParsing="false" onAction="#clicouDataNascSophia" text="Data Nasc Sophia" />
+                  <MenuItem fx:id="mnInspetor" mnemonicParsing="false" onAction="#clicouInspetor" text="Inspetor" />
+               </items>
+          </Menu>
+            <Menu fx:id="mnSobre" mnemonicParsing="false" text="Outros">
+               <items>
+                  <MenuItem fx:id="mnAbout1" mnemonicParsing="false" onAction="#clicouVersoes" text="Notificações de Versões" />
+                  <MenuItem fx:id="mnAbout11" mnemonicParsing="false" onAction="#clicouAbout" text="Sobre o EvedSys" />
+               </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+      <HBox alignment="CENTER" layoutX="261.0" layoutY="110.0" prefHeight="100.0" prefWidth="373.0" spacing="20.0" style="-fx-background-color: #Fe3;" visible="false">
+         <children>
+            <FontAwesomeIconView fx:id="fa1" size="40" />
+            <MaterialDesignIconView fx:id="md1" size="40" />
+            <MaterialIconView fx:id="mi1" size="40" />
+            <OctIconView fx:id="oi1" size="40" />
+            <WeatherIconView fx:id="wi1" size="40" />
+         </children>
+      </HBox>
+      <TextField fx:id="tf1" layoutX="485.0" layoutY="238.0" visible="false" />
+      <Button layoutX="650.0" layoutY="238.0" mnemonicParsing="false" onAction="#mudaIcon" text="Button" visible="false" />
+      <AnchorPane fx:id="apPlacar1" layoutX="24.0" layoutY="133.0" prefHeight="379.0" prefWidth="427.0" style="-fx-background-color: #414141;" styleClass="card-unpadded">
+         <children>
+            <Pane layoutX="39.0" prefHeight="37.0" prefWidth="363.0" style="-fx-background-color: #2a2a2a;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label layoutX="22.0" layoutY="9.0" prefHeight="20.0" prefWidth="377.0" style="-fx-font-weight: bold; -fx-text-fill: #e9e8e2; -fx-font-size: 14px;" text="Quantidade de assentos e matriculados" />
+               </children>
+            </Pane>
+            <GridPane layoutX="23.0" layoutY="44.0" prefHeight="271.0" prefWidth="84.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="89.0" minWidth="77.0" prefWidth="77.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label fx:id="lblUltAnoSem1" prefHeight="35.0" prefWidth="67.0" text="Regulares" textFill="#f7d693" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblUltAnoSem11" layoutX="10.0" layoutY="15.0" text="Especiais" textFill="#f7d693" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblUltAnoSem111" layoutX="10.0" layoutY="44.0" text="Ouvintes" textFill="#f7d693" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblUltAnoSem1111" layoutX="10.0" layoutY="54.0" text="Gravação" textFill="#f7d693" GridPane.rowIndex="4">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblUltAnoSem12" layoutX="10.0" layoutY="44.0" prefHeight="44.0" prefWidth="68.0" text="Semestre" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblUltAnoSem11111" layoutX="10.0" layoutY="169.0" text="TOTAL" textFill="#f7d693" GridPane.rowIndex="6">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblUltAnoSem11112" text="Não Identif." textFill="#f7d693" GridPane.rowIndex="5">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </GridPane>
+            <VBox layoutX="136.0" layoutY="50.0" prefHeight="185.0" prefWidth="80.0" spacing="10.0">
+               <children>
+                  <JFXButton fx:id="buSem1Sem" accessibleText="buInsereRec" buttonType="RAISED" focusTraversable="false" layoutX="10.0" layoutY="84.0" prefHeight="29.0" prefWidth="74.0" style="-fx-background-color: #000000;" styleClass="button-nav" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="buSem1Reg" accessibleText="buInsereRec" buttonType="RAISED" onAction="#clicouSem1Reg" prefHeight="29.0" prefWidth="74.0" style="-fx-background-color: #2196F3; -fx-background-radius: 4; -fx-text-fill: #FFFFFF;" styleClass="button-nav" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="buSem1Esp" accessibleText="buInsereRec" buttonType="RAISED" onAction="#clicouSem1Esp" prefHeight="29.0" prefWidth="74.0" style="-fx-background-color: #FF6E40; -fx-background-radius: 4;" styleClass="button-nav" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="buSem1Ouv" accessibleText="buInsereRec" buttonType="RAISED" onAction="#clicouSem1Ouv" prefHeight="29.0" prefWidth="74.0" style="-fx-background-color: #FFC107; -fx-text-fill: #000; -fx-background-radius: 4;" styleClass="button-nav" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="buSem1Gra" accessibleText="buInsereRec" buttonType="RAISED" layoutX="10.0" layoutY="121.0" onAction="#clicouSem1Gra" prefHeight="29.0" prefWidth="74.0" style="-fx-background-color: #009688; -fx-background-radius: 4;" styleClass="button-nav" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="buSem1NaoId" accessibleText="buInsereRec" buttonType="RAISED" layoutX="10.0" layoutY="166.0" onAction="#clicouSem1NaoId" prefHeight="29.0" prefWidth="74.0" style="-fx-background-color: #8D5501; -fx-background-radius: 4;" styleClass="button-nav" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="buSem1Tot" accessibleText="buInsereRec" buttonType="RAISED" layoutX="10.0" layoutY="205.0" onAction="#clicouSem1Tot" prefHeight="29.0" prefWidth="74.0" style="-fx-background-color: #7C4DFF; -fx-background-radius: 4;" styleClass="button-nav" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </VBox>
+            <VBox layoutX="219.0" layoutY="50.0" prefHeight="185.0" prefWidth="80.0" spacing="10.0">
+               <children>
+                  <JFXButton fx:id="buSem2Sem" accessibleText="buInsereRec" buttonType="RAISED" focusTraversable="false" layoutX="10.0" layoutY="84.0" prefHeight="29.0" prefWidth="74.0" style="-fx-background-color: #000000;" styleClass="button-nav" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="buSem2Reg" accessibleText="buInsereRec" buttonType="RAISED" onAction="#clicouSem2Reg" prefHeight="29.0" prefWidth="74.0" style="-fx-background-color: #2196F3; -fx-background-radius: 4;" styleClass="button-nav" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="buSem2Esp" accessibleText="buInsereRec" buttonType="RAISED" onAction="#clicouSem2Esp" prefHeight="29.0" prefWidth="74.0" style="-fx-background-color: #FF6E40; -fx-background-radius: 4;" styleClass="button-nav" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="buSem2Ouv" accessibleText="buInsereRec" buttonType="RAISED" onAction="#clicouSem2Ouv" prefHeight="29.0" prefWidth="74.0" style="-fx-background-color: #FFC107; -fx-text-fill: #000; -fx-background-radius: 4;" styleClass="button-nav" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="buSem2Gra" accessibleText="buInsereRec" buttonType="RAISED" layoutX="10.0" layoutY="121.0" onAction="#clicouSem2Gra" prefHeight="29.0" prefWidth="74.0" style="-fx-background-color: #009688; -fx-background-radius: 4;" styleClass="button-nav" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="buSem2NaoId" accessibleText="buInsereRec" buttonType="RAISED" layoutX="10.0" layoutY="166.0" onAction="#clicouSem2NaoId" prefHeight="29.0" prefWidth="74.0" style="-fx-background-color: #8D5501; -fx-background-radius: 4;" styleClass="button-nav" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="buSem2Tot" accessibleText="buInsereRec" buttonType="RAISED" layoutX="10.0" layoutY="205.0" onAction="#clicouSem2Tot" prefHeight="29.0" prefWidth="74.0" style="-fx-background-color: #7C4DFF; -fx-background-radius: 4;" styleClass="button-nav" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </VBox>
+            <VBox layoutX="302.0" layoutY="50.0" prefHeight="185.0" prefWidth="80.0" spacing="10.0">
+               <children>
+                  <JFXButton fx:id="buSem3Sem" accessibleText="buInsereRec" buttonType="RAISED" focusTraversable="false" layoutX="10.0" layoutY="84.0" prefHeight="29.0" prefWidth="74.0" style="-fx-background-color: #000000;" styleClass="button-nav" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="buSem3Reg" accessibleText="buInsereRec" buttonType="RAISED" onAction="#clicouSem3Reg" prefHeight="29.0" prefWidth="74.0" style="-fx-background-color: #2196F3; -fx-background-radius: 4;" styleClass="button-nav" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="buSem3Esp" accessibleText="buInsereRec" buttonType="RAISED" onAction="#clicouSem3Esp" prefHeight="29.0" prefWidth="74.0" style="-fx-background-color: #FF6E40; -fx-background-radius: 4;" styleClass="button-nav" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="buSem3Ouv" accessibleText="buInsereRec" buttonType="RAISED" onAction="#clicouSem3Ouv" prefHeight="29.0" prefWidth="74.0" style="-fx-background-color: #FFC107; -fx-text-fill: #000; -fx-background-radius: 4;" styleClass="button-nav" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="buSem3Gra" accessibleText="buInsereRec" buttonType="RAISED" layoutX="10.0" layoutY="121.0" onAction="#clicouSem3Gra" prefHeight="29.0" prefWidth="74.0" style="-fx-background-color: #009688; -fx-background-radius: 4;" styleClass="button-nav" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="buSem3NaoId" accessibleText="buInsereRec" buttonType="RAISED" onAction="#clicouSem3NaoId" prefHeight="29.0" prefWidth="74.0" style="-fx-background-color: #8D5501; -fx-background-radius: 4;" styleClass="button-nav" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="buSem3Tot" accessibleText="buInsereRec" buttonType="RAISED" layoutX="10.0" layoutY="205.0" onAction="#clicouSem3Tot" prefHeight="29.0" prefWidth="74.0" style="-fx-background-color: #7C4DFF; -fx-background-radius: 4;" styleClass="button-nav" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </VBox>
+            <Label fx:id="lblUltAnoSem111111" layoutX="24.0" layoutY="342.0" text="Matriculados" textFill="#f7d693">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="buSem1Mat" accessibleText="buInsereRec" buttonType="RAISED" layoutX="137.0" layoutY="338.0" onAction="#clicouSem1Mat" prefHeight="29.0" prefWidth="74.0" style="-fx-background-color: #A1A1A1; -fx-background-radius: 4;" styleClass="button-nav" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="buSem2Mat" accessibleText="buInsereRec" buttonType="RAISED" layoutX="219.0" layoutY="338.0" onAction="#clicouSem2Mat" prefHeight="29.0" prefWidth="74.0" style="-fx-background-color: #A1A1A1; -fx-background-radius: 4;" styleClass="button-nav" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="buSem3Mat" accessibleText="buInsereRec" buttonType="RAISED" layoutX="302.0" layoutY="337.0" onAction="#clicouSem3Mat" prefHeight="29.0" prefWidth="74.0" style="-fx-background-color: #A1A1A1; -fx-background-radius: 4;" styleClass="button-nav" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </JFXButton>
+            <Line endX="94.0" layoutX="315.0" layoutY="279.0" startX="-292.0" stroke="#f7d693" strokeWidth="2.0" />
+            <JFXButton fx:id="buAtuAssentos" accessibleText="buInsereRec" buttonType="RAISED" contentDisplay="CENTER" layoutX="387.0" layoutY="340.0" maxHeight="23.0" maxWidth="23.0" minHeight="23.0" minWidth="23.0" onAction="#clicouAtuAssentos" prefHeight="23.0" prefWidth="23.0" style="-fx-background-color: #2BB502;" styleClass="button-refresh" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView boundsType="LOGICAL_VERTICAL_CENTER" fill="WHITE" glyphName="REFRESH" size="14" styleClass="glyph-icon-nav" wrappingWidth="11.0">
+                     <rotationAxis>
+                        <Point3D />
+                     </rotationAxis>
+                  </FontAwesomeIconView>
+               </graphic>
+            </JFXButton>
+            <AnchorPane fx:id="pnEsconde1" layoutX="11.0" layoutY="41.0" prefHeight="329.0" prefWidth="373.0" style="-fx-background-color: #414141;" visible="false">
+               <children>
+                  <Label layoutX="176.0" layoutY="302.0" text="Clique aqui para atualizar o placar -&gt;" textFill="#f7d693" />
+               </children></AnchorPane>
+            <AnchorPane fx:id="pnEsconde2" layoutX="369.0" layoutY="230.0" prefHeight="100.0" prefWidth="45.0" style="-fx-background-color: #414141;" visible="false" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

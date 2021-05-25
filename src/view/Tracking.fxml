@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="580.0" prefWidth="1057.0" styleClass="tab-Pesquisa" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TrackingController">
+   <children>
+      <Pane layoutY="-91.0" maxHeight="670.0" minHeight="40.0" prefHeight="670.0" prefWidth="1132.0" style="-fx-background-color: #DCCFB8;" styleClass="card-title" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label alignment="CENTER" layoutX="14.0" layoutY="18.0" text="Rastreamento de Atividades" textAlignment="CENTER" textFill="#07525b">
+               <font>
+                  <Font name="Calibri" size="24.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="buPesquisa" accessibleText="buPesquisa" buttonType="RAISED" layoutX="800.0" layoutY="70.0" onAction="#clicouMinhaPesq" onKeyPressed="#clicouMinhaPesqEnter" prefHeight="34.0" prefWidth="117.0" style="-fx-background-color: #8E64D7;" styleClass="button-nav" text="Pesquisa" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="SEARCH" wrappingWidth="17.142857551574707" />
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="buLimpa" accessibleText="buPesquisa" buttonType="RAISED" layoutX="926.0" layoutY="70.0" onAction="#clicouLimpa" prefHeight="34.0" prefWidth="117.0" style="-fx-background-color: #f39c12;" styleClass="button-nav" text="Limpa" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="CIRCLE_THIN" styleClass="glyph-icon-nav" wrappingWidth="17.214285850524902" />
+               </graphic>
+            </JFXButton>
+            <Label layoutX="16.0" layoutY="57.0" text="Usuário(a)" />
+            <ComboBox layoutX="16.0" layoutY="74.0" prefHeight="25.0" prefWidth="186.0" />
+            <JFXDatePicker layoutX="275.0" layoutY="75.0" prefHeight="25.0" prefWidth="105.0" promptText="Data inicial" />
+            <JFXDatePicker layoutX="432.0" layoutY="74.0" prefWidth="105.0" promptText="Data final" />
+         </children>
+      </Pane>
+      <TableView fx:id="tvPesquisa" layoutX="78.0" layoutY="118.0" onMouseReleased="#soltouComboCampos" prefHeight="385.0" prefWidth="707.0" AnchorPane.bottomAnchor="31.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="118.0">
+         <columns>
+            <TableColumn fx:id="tcUsu" prefWidth="140.0" text="Usuário" />
+            <TableColumn fx:id="tcDat" prefWidth="170.0" text="Data e Hora" />
+            <TableColumn fx:id="tcTel" prefWidth="146.0" text="Tela" />
+            <TableColumn fx:id="tcAti" prefWidth="136.0" text="Atividade" />
+            <TableColumn fx:id="tcDes" prefWidth="460.0" text="Descrição" />
+         </columns>
+         <contextMenu>
+            <ContextMenu>
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#clicouAbre" text="Abre este registro" />
+               </items>
+            </ContextMenu>
+         </contextMenu>
+      </TableView>
+      <AnchorPane maxHeight="30.0" minHeight="20.0" prefHeight="30.0" prefWidth="707.0" style="-fx-background-color: #D0D9D9;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <TextField fx:id="lblRegistros" layoutX="35.0" prefHeight="29.0" prefWidth="160.0" style="-fx-background-color: #D3D3FF;" text="Registros" AnchorPane.leftAnchor="0.0">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </TextField>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

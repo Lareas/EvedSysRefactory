@@ -1,0 +1,61 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 08/05/2020, 09:27:07
+    Author     : ticoa
+*/
+
+.table-view.column-header.label{
+  -fx-text-alignment: center;
+}
+
+#cabec_coluna{
+    -fx-text-alignment: center;
+}
+
+
+#tcl{
+    -fx-background-position:  center;
+    -fx-text-alignment: center;
+}
+
+.text{
+    -fx-background-color: #394F76;
+    -fx-text-fill: #FFFFFF
+}
+
+/*Card and its components*/
+.card {
+    -fx-background-color: rgb(255.0, 255.0, 255.0);
+    -fx-background-radius: 4.0;
+    -fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.15), 6.0, 0.7, 0.0,1.5);
+    -fx-padding: 16 16 16 16;
+}
+.card-unpadded {
+    -fx-background-color: rgb(255.0, 255.0, 255.0);
+    -fx-background-radius: 4.0;
+    -fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.15), 6.0, 0.7, 0.0,
+        1.5);
+    -fx-padding: 0 0 0 0;
+}
+
+.card-title {
+    -fx-font-size: 20.0px;
+    -fx-padding: 5 0 5 0;
+}
+
+.card-title .text {
+    -fx-fill: -fx-text-title-color;
+}
+
+.card-subtitle {
+    -fx-font-size: 16.0px;
+    -fx-padding: 5 0 5 0;
+}
+
+.card-subtitle .text {
+    -fx-fill: -fx-text-subtitle-color;
+}
